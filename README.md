@@ -78,4 +78,7 @@ This is a table:
 | Heading 1 | Heading 2 |
 |-----------|-----------|
 |Some stuff | Some more stuff in this column |
+|Some stuff | Some more stuff in this column |
+|Some stuff | Some more stuff in this column |
+|Some stuff | Some more stuff in this column |
 
