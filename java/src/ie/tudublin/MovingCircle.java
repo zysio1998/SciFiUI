@@ -24,11 +24,10 @@ public class MovingCircle
     {
         ui.stroke(255);
         ui.noFill();
-        ui.ellipse(x, y, diameter, diameter);
+        ui.ellipse(x, y +150 , diameter, diameter);
         ui.fill(255);
-        ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text("I am a moving circle", x, y);
-
+        ui.textAlign(PApplet.CENTER, PApplet.CENTER); //allign  to the middle
+        ui.text("I am a moving circle", x, y +150);
     }
 
     public void update()
