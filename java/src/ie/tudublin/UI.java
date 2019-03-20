@@ -44,6 +44,7 @@ public class UI extends PApplet
     {
         background(0);
         b.render();
+        b.mouseClicked();
 
         mc.update();
         mc.render();

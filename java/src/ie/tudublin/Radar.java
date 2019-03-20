@@ -37,8 +37,7 @@ public class Radar
     {
         angle += 0.01;
         x1 += (radius * (Math.cos(angle)));
-        y1 += (radius * (Math.sin(angle)));
-        
+        y1 += (radius * (Math.sin(angle)));        
     }
 
     public void reset()
