@@ -1,8 +1,6 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
-//import processing.data.*;
-//import java.lang.Math;
 
 public class Radar
 {
