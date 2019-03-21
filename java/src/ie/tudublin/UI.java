@@ -8,9 +8,8 @@ public class UI extends PApplet
     Button b;
     MovingCircle mc;
     Radar r;
-	PImage img;
-	
-	
+	Ship s;
+	PImage img;	
 
     boolean[] keys = new boolean[1024];
 
@@ -30,8 +29,7 @@ public class UI extends PApplet
     }
     
 
-    public void settings()
-    {
+    public void settings()    {
 		
         size(800, 800);
         // Use fullscreen instead of size to make your interface fullscreen
@@ -44,6 +42,7 @@ public class UI extends PApplet
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, width / 2, height / 2, 200);
+		s = new Ship(this, width / 2, height / 2, 80);
     }
 
     public void draw()
@@ -58,6 +57,9 @@ public class UI extends PApplet
         r.update();
         r.render();
         r.reset();
+		
+		s.update();
+		s.render();
 
         if (checkKey(LEFT))
         {
