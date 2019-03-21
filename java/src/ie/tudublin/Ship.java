@@ -24,9 +24,16 @@ public class Ship
     {
         ui.stroke(255);
         ui.noFill();
-        ui.ellipse(x, y +150 , diameter, diameter);
-        ui.fill(255);
-		ui.rect(0,550,800,550);
+        ui.ellipse(x, y + 150 , diameter, diameter);
+		ui.fill(137,107,171);
+		ui.noStroke();
+		ui.rect(0,650,800,650);
+		ui.stroke(255);
+		ui.triangle(400,450,200,650,600,650);
+		ui.triangle(400,450,600,650,600,450);
+		ui.triangle(400,450,200,650,200,450);
+		ui.rect(0,550,100,580);
+		ui.rect(700,550,800,580);
         
         
     }
