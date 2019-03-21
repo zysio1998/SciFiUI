@@ -1,14 +1,16 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class UI extends PApplet
 {
     Button b;
     MovingCircle mc;
     Radar r;
-	
 	PImage img;
+	
+	
 
     boolean[] keys = new boolean[1024];
 
@@ -30,10 +32,11 @@ public class UI extends PApplet
 
     public void settings()
     {
+		
         size(800, 800);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-		img = loadImage("background.jpg");
+		img = loadImage("images/background.jpg");
     }
 
     public void setup()
