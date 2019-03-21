@@ -51,8 +51,8 @@ public class UI extends PApplet
         b.render();
         b.mouseClicked();
 
-        mc.update();
-        mc.render();
+        //mc.update();
+        //mc.render();
 
         r.update();
         r.render();

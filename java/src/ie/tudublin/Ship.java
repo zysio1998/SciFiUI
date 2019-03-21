@@ -26,8 +26,9 @@ public class Ship
         ui.noFill();
         ui.ellipse(x, y +150 , diameter, diameter);
         ui.fill(255);
-        ui.textAlign(PApplet.CENTER, PApplet.CENTER); //allign  to the middle
-        ui.text("I am a moving circle", x, y +150);
+		ui.rect(0,550,800,550);
+        
+        
     }
 
     public void update()
