@@ -9,7 +9,8 @@ public class UI extends PApplet
     MovingCircle mc;
     Radar r;
 	Ship s;
-	PImage img;	
+    PImage img;	
+    Sun sun;
 
     boolean[] keys = new boolean[1024];
 
@@ -42,24 +43,29 @@ public class UI extends PApplet
         b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, width / 2, height / 2, 200);
-		s = new Ship(this, width / 2, height / 2, 80);
+        s = new Ship(this, width / 2, height / 2, 80);
+        sun = new Sun(this, width / 2, height / 2, 75);
     }
 
     public void draw()
     {
         background(img);
-        b.render();
-        b.mouseClicked();
+        //b.render();
+        //b.mouseClicked();
 
         //mc.update();
         //mc.render();
 
-        r.update();
-        r.render();
-        r.reset();
+        // r.update();
+        // r.render();
+        // r.reset();
 		
-		s.update();
-		s.render();
+		//s.update();
+        //s.render();
+        
+        
+        sun.render();
+        
 
         if (checkKey(LEFT))
         {
