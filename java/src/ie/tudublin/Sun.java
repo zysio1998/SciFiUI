@@ -2,7 +2,7 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PImage;
-import processing.core.PGraphics;
+//import processing.core.PGraphics;
 
 public class Sun
 {
@@ -10,7 +10,7 @@ public class Sun
     private float y;
     private float diameter;
     PApplet ui;
-    PImage sun;
+    PImage sunny;
 
     
 
@@ -28,19 +28,19 @@ public class Sun
     
     public void render()
     {
-        sun = loadImage("images/sun.jpg");
+        
         ui.stroke(255,154,0);
-        //ui.fill(sun);
-        ui.ellipse(sun(x, y , diameter, diameter), diameter, diameter, diameter);
+        
+        ui.ellipse(x, y , diameter, diameter);                           
     }
 
-    private float sun(float x2, float y2, float diameter2, float diameter3) {
-        return 0;
-    }
+    // public void draw()
+    // {
+    //     sunny = loadImage("images/sun.jpg");
+    //     image(sunny,400,400,50);
+    // }
 
-    private PImage loadImage(String string) {
-        return null;
-    }
+   
 }
 
 

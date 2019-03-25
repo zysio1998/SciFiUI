@@ -9,7 +9,7 @@ public class UI extends PApplet
     MovingCircle mc;
     Radar r;
 	Ship s;
-    PImage img;	
+    PImage img,sunny;	
     Sun sun;
 
     boolean[] keys = new boolean[1024];
@@ -35,7 +35,8 @@ public class UI extends PApplet
         size(800, 800);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-		img = loadImage("images/background.jpg");
+        img = loadImage("images/background.jpg");
+        sunny = loadImage("images/sun.jpg");
     }
 
     public void setup()
@@ -63,7 +64,7 @@ public class UI extends PApplet
 		//s.update();
         //s.render();
         
-        
+        //image(sunny,400,400,50);
         sun.render();
         
 
