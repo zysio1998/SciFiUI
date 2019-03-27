@@ -1,6 +1,7 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 
 public class Earth
@@ -11,6 +12,7 @@ public class Earth
 	private float radius;
 	private float angle = 0;
     PApplet ui;
+	PImage earth;
 	
 		
 	
@@ -20,31 +22,28 @@ public class Earth
         this.x = x;
         this.y = y;
         this.diameter = diameter;  
-		radius = diameter /2;		
+		radius = diameter /2;
+		earth = ui.loadImage("images/earth.png");		
     }    
 	
     
     public void render()
     {        
-        ui.stroke(0,255,0);        
-        ui.ellipse(x, y , diameter, diameter);  
-		ui.fill(255,0,0);		
+        ui.image(earth,x,y);		
     }
 
     public void update()
     {
-        angle += 0.01;
-        x += ((radius) * (Math.cos(angle)));
-        y += ((radius) * (Math.sin(angle)));      
-		//System.out.println(radius);
-		//System.out.println(angle);
+        angle += 0.005;
+        x += ((diameter +80) * (Math.cos(angle)));
+        y += ((diameter +80) * (Math.sin(angle)));      
     }
    
-    public void reset()
-    {
-        x = 400;
-        y = 650;
-    }
+	public void reset()
+	{
+       x = 370;
+       y = 350;
+	}
 }
 
 

@@ -11,6 +11,7 @@ public class Sun
     private float diameter;
     PApplet ui;
 	PImage sunny;
+	
 		
     public Sun(PApplet ui, float x, float y, float diameter)
     {
@@ -19,6 +20,7 @@ public class Sun
         this.y = y;
         this.diameter = diameter;     
 		sunny = ui.loadImage("images/sun.png");
+		
     }    
 	
     
