@@ -9,8 +9,10 @@ public class UI extends PApplet
     MovingCircle mc;
     Radar r;
 	Ship s;
-    PImage img,sunny;	
+    PImage img;
+	//PImage sunny;
     Sun sun;
+	Earth earth;
 
     boolean[] keys = new boolean[1024];
 
@@ -33,10 +35,10 @@ public class UI extends PApplet
     public void settings()    {
 		
         size(800, 800);
-        // Use fullscreen instead of size to make your interface fullscreen
+        //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-        img = loadImage("images/background.jpg");
-        sunny = loadImage("images/sun.jpg");
+        img = loadImage("images/background.jpg");    
+		//sunny = loadImage("images/sun.jpg");		
     }
 
     public void setup()
@@ -45,7 +47,8 @@ public class UI extends PApplet
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, width / 2, height / 2, 200);
         s = new Ship(this, width / 2, height / 2, 80);
-        sun = new Sun(this, width / 2, height / 2, 75);
+        sun = new Sun(this, width / 2, height / 2, 100);
+		earth = new Earth(this, width / 2, height / 2, 75);
     }
 
     public void draw()
@@ -64,8 +67,9 @@ public class UI extends PApplet
 		//s.update();
         //s.render();
         
-        //image(sunny,400,400,50);
         sun.render();
+		//image(sunny,350,350);
+		earth.render();
         
 
         if (checkKey(LEFT))
