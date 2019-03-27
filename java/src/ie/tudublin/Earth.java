@@ -9,7 +9,6 @@ public class Earth
     private float x;
     private float y;
     private float diameter;
-	private float radius;
 	private float angle = 0;
     PApplet ui;
 	PImage earth;
@@ -22,7 +21,6 @@ public class Earth
         this.x = x;
         this.y = y;
         this.diameter = diameter;  
-		radius = diameter /2;
 		earth = ui.loadImage("images/earth.png");		
     }    
 	

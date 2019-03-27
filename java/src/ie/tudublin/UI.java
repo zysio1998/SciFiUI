@@ -33,10 +33,10 @@ public class UI extends PApplet
 
     public void settings()    
 	{	
-		size(800, 800);
+		size(1000, 800);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-        img = loadImage("images/background.jpg");    
+        img = loadImage("images/background3.jpg");    
 		//sun.sunny = loadImage("images/sun.png");		
     }
 
@@ -66,9 +66,7 @@ public class UI extends PApplet
 		//s.update();
         //s.render();
         
-        sun.render();
-		
-		
+        sun.render();		
 		
 		earth.update();
 		earth.render();
