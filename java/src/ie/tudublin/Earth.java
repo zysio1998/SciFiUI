@@ -5,41 +5,46 @@ import processing.core.PApplet;
 
 public class Earth
 {
-    private float x1;
-    private float y1;
-    private float diameter1;
+    private float x;
+    private float y;
+    private float diameter;
 	private float radius;
 	private float angle = 0;
     PApplet ui;
 	
 		
 	
-    public Earth(PApplet ui, float x1, float y1, float diameter1)
+    public Earth(PApplet ui, float x, float y, float diameter)
     {
         this.ui = ui;
-        this.x1 = x1;
-        this.y1 = y1;
-        this.diameter1 = diameter1;  
-		radius = diameter1 /2;		
+        this.x = x;
+        this.y = y;
+        this.diameter = diameter;  
+		radius = diameter /2;		
     }    
 	
     
     public void render()
     {        
         ui.stroke(0,255,0);        
-        ui.ellipse(x1, y1 , diameter1, diameter1);  
-		ui.fill(0,255,0);		
+        ui.ellipse(x, y , diameter, diameter);  
+		ui.fill(255,0,0);		
     }
 
     public void update()
     {
         angle += 0.01;
-        x1 += ((radius-40) * (Math.cos(angle)));
-        y1 += ((radius-40) * (Math.sin(angle)));      
+        x += ((radius) * (Math.cos(angle)));
+        y += ((radius) * (Math.sin(angle)));      
 		//System.out.println(radius);
 		//System.out.println(angle);
     }
    
+    public void reset()
+    {
+        x = 400;
+        y = 650;
+    }
 }
 
 

@@ -10,7 +10,6 @@ public class UI extends PApplet
     Radar r;
 	Ship s;
     PImage img;
-	//PImage sunny;
     Sun sun;
 	Earth earth;
 
@@ -32,18 +31,18 @@ public class UI extends PApplet
     }
     
 
-    public void settings()    {
-		
-        size(800, 800);
+    public void settings()    
+	{	
+		size(800, 800);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
         img = loadImage("images/background.jpg");    
-		//sunny = loadImage("images/sun.jpg");		
+		//sun.sunny = loadImage("images/sun.png");		
     }
 
     public void setup()
-    {
-        b = new Button(this, 50, 50, 100, 50, "I am a button");
+    {	
+		b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, width / 2, height / 2, 200);
         s = new Ship(this, width / 2, height / 2, 80);
@@ -69,8 +68,11 @@ public class UI extends PApplet
         
         sun.render();
 		
+		
+		
 		earth.update();
 		earth.render();
+		earth.reset();
 		
 		
         
