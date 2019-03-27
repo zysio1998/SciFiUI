@@ -23,10 +23,10 @@ public class Sun
     
     public void render()
     {        
-        ui.stroke(255,154,0);        
+        ui.stroke(255,0,0);        
         ui.ellipse(x, y , diameter, diameter);   
 		ui.fill(255,0,0);
-		ui.ellipse(x, y , diameter - 5, diameter - 5); 
+		//ui.ellipse(x, y , diameter - 5, diameter - 5); 
 		//ui.image(sunny,50,50);		
     }
 
