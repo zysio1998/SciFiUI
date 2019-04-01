@@ -36,7 +36,7 @@ public class UI extends PApplet
 		size(1000, 800);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-        img = loadImage("images/background3.jpg");    
+        img = loadImage("images/background.jpg");    
 		//sun.sunny = loadImage("images/sun.png");		
     }
 
