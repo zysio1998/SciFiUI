@@ -7,11 +7,9 @@ public class UI extends PApplet
 {
     Button b;
     MovingCircle mc;
-    Radar r;
-	Ship s;
     PImage img;
     Planets planets;
-	Earth earth;
+	Orbits orbits;
 
     boolean[] keys = new boolean[1024];
 
@@ -33,7 +31,7 @@ public class UI extends PApplet
 
     public void settings()    
 	{	
-		size(1000, 1000);
+		size(1000, 900);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
         img = loadImage("images/background.jpg");    
@@ -44,10 +42,8 @@ public class UI extends PApplet
     {	
 		b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
-        r = new Radar(this, width / 2, height / 2, 200);
-        s = new Ship(this, width / 2, height / 2, 80);
         planets = new Planets(this, width / 2, height / 2, 150);
-		//earth = new Earth(this, 400, 650, width);
+		orbits = new Orbits(this, 400, 650, width);
     }
 
     public void draw()
@@ -67,15 +63,14 @@ public class UI extends PApplet
         //s.render();
         
         planets.render();		
-		//earth.update();
-		//earth.render();		
-		//earth.reset();
+	    orbits.update();
+		orbits.render();		
+		orbits.reset();
 		
 		
 		
-		line(0,500,1000,500);
+		line(0,450,1000,450);
 		line(500,0,500,1000);
-		line(100,0,100,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
 		stroke(255,250,250);

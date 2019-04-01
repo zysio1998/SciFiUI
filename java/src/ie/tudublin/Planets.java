@@ -7,7 +7,7 @@ public class Planets
 {
     private float x;
     private float y;
-    private float diameter;
+    //private float diameter;
     PApplet ui;
 	PImage sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune;
 	
@@ -16,7 +16,7 @@ public class Planets
         this.ui = ui;
         this.x = x;
         this.y = y;
-        this.diameter = diameter;     
+        //this.diameter = diameter;     
         sun = ui.loadImage("images/sun.png"); //140*140
         mercury = ui.loadImage("images/mercury.png"); //20*20		
 		venus = ui.loadImage("images/venus.png"); //35*35		
@@ -31,15 +31,15 @@ public class Planets
     
     public void render()
     {        
-        ui.image(sun,x - 70,y - 70);
-		ui.image(mercury,x -105 ,y -10);
-		ui.image(venus,x -145 ,y -17);
-		ui.image(earth,x -185 ,y -17);
-		ui.image(mars,x -215 ,y -12);		
-        ui.image(jupiter,x -290 ,y -35 );  
-		ui.image(saturn,x -350 ,y -27 );
-		ui.image(uranus,x -390 ,y -17 );
-		ui.image(neptune,x -430 ,y -17);		
+        ui.image(sun,x - 50,y - 50);
+		ui.image(mercury,x -75 ,y -10);
+		ui.image(venus,x -115 ,y -17);
+		//ui.image(earth,x -155 ,y -17);
+		ui.image(mars,x -185 ,y -12);		
+        ui.image(jupiter,x -260 ,y -35 );  
+		ui.image(saturn,x -320 ,y -27 );
+		ui.image(uranus,x -360 ,y -17 );
+		ui.image(neptune,x -400 ,y -17);		
     }	
 }
 

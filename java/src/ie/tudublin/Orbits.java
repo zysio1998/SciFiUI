@@ -4,11 +4,11 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 
-public class Earth
+public class Orbits
 {
     private float x;
     private float y;
-    private float diameter;
+    //private float diameter;
 	private float angle = 0;
     PApplet ui;
 	PImage earth;
@@ -16,12 +16,12 @@ public class Earth
 	
 		
 	
-    public Earth(PApplet ui, float x, float y, float diameter)
+    public Orbits(PApplet ui, float x, float y, float diameter)
     {
         this.ui = ui;
         this.x = x;
         this.y = y;
-        this.diameter = diameter;   //1000
+       // this.diameter = diameter;   //1000
 		radius = diameter / 2;  //500
 		earth = ui.loadImage("images/earth.png");	//40*40	
     }    
@@ -35,11 +35,8 @@ public class Earth
     public void update()
     {
         angle += 0.008;  //0.003
-        x += ((radius -305) * (Math.cos(angle)));  // -340 take away from 500 radius
-        y += ((radius -305) * (Math.sin(angle))); 
-		//System.out.println(radius);
-		//System.out.println(diameter);
-
+        x += ((radius -365) * (Math.cos(angle)));  //500 - 365 = 135 away from middle
+        y += ((radius -365) * (Math.sin(angle))); 
     }
    
 	public void reset()
