@@ -31,7 +31,7 @@ public class Planets
     
     public void render()
     {        
-        ui.image(sun,x - 75,y - 70);
+        ui.image(sun,x - 70,y - 70);
 		ui.image(mercury,x -105 ,y -10);
 		ui.image(venus,x -145 ,y -17);
 		ui.image(earth,x -185 ,y -17);

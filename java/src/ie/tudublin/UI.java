@@ -33,7 +33,7 @@ public class UI extends PApplet
 
     public void settings()    
 	{	
-		size(1000, 900);
+		size(1000, 1000);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
         img = loadImage("images/background.jpg");    
@@ -73,8 +73,9 @@ public class UI extends PApplet
 		
 		
 		
-		//line(0,450,1000,450);
-		//line(500,0,500,900);
+		line(0,500,1000,500);
+		line(500,0,500,1000);
+		line(100,0,100,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
 		stroke(255,250,250);
