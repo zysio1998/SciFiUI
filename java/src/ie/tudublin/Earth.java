@@ -21,7 +21,7 @@ public class Earth
         this.x = x;
         this.y = y;
         this.diameter = diameter;  
-		earth = ui.loadImage("images/earth.png");		
+		earth = ui.loadImage("images/earth.png");	//50*50	
     }    
 	
     

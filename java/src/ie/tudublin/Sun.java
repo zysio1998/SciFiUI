@@ -19,9 +19,9 @@ public class Sun
         this.x = x;
         this.y = y;
         this.diameter = diameter;     
-        sunny = ui.loadImage("images/sunny.png");
-        jupiter = ui.loadImage("images/jupitr.png");
-		mars = ui.loadImage("images/mars.png");
+        sunny = ui.loadImage("images/sunny.png"); //150*150
+        jupiter = ui.loadImage("images/jupiter.png"); //75*75
+		mars = ui.loadImage("images/mars.png"); //40*40
 		
     }    
 	
