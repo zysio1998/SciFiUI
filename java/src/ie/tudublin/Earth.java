@@ -12,6 +12,7 @@ public class Earth
 	private float angle = 0;
     PApplet ui;
 	PImage earth;
+	private float radius;
 	
 		
 	
@@ -20,8 +21,9 @@ public class Earth
         this.ui = ui;
         this.x = x;
         this.y = y;
-        this.diameter = diameter;  
-		earth = ui.loadImage("images/earth.png");	//50*50	
+        this.diameter = diameter;   //1000
+		radius = diameter / 2;  //500
+		earth = ui.loadImage("images/earth.png");	//40*40	
     }    
 	
     
@@ -32,15 +34,18 @@ public class Earth
 
     public void update()
     {
-        angle += 0.005;
-        x += ((diameter +80) * (Math.cos(angle)));
-        y += ((diameter +80) * (Math.sin(angle)));      
+        angle += 0.008;  //0.003
+        x += ((radius -305) * (Math.cos(angle)));  // -340 take away from 500 radius
+        y += ((radius -305) * (Math.sin(angle))); 
+		//System.out.println(radius);
+		//System.out.println(diameter);
+
     }
    
 	public void reset()
 	{
-       x = 460;
-       y = 370;
+       x = 480;  // defines the origin of the cirlce minus the size of the circle itself
+       y = 430;
 	}
 }
 

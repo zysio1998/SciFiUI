@@ -10,7 +10,7 @@ public class Sun
     private float y;
     private float diameter;
     PApplet ui;
-	PImage sunny,jupiter,mars;
+	PImage sunny,jupiter,mars,venus;
 	
 		
     public Sun(PApplet ui, float x, float y, float diameter)
@@ -21,7 +21,8 @@ public class Sun
         this.diameter = diameter;     
         sunny = ui.loadImage("images/sunny.png"); //150*150
         jupiter = ui.loadImage("images/jupiter.png"); //75*75
-		mars = ui.loadImage("images/mars.png"); //40*40
+		mars = ui.loadImage("images/mars.png"); //30*30
+		venus = ui.loadImage("images/venus.png"); //40*40
 		
     }    
 	
@@ -29,8 +30,9 @@ public class Sun
     public void render()
     {        
         ui.image(sunny,x - 75,y - 75);
-        ui.image(jupiter,x -300 ,y -37 );  
-		ui.image(mars,x -220 ,y -20);
+        ui.image(jupiter,x -330 ,y -37 );  
+		ui.image(mars,x -250 ,y -15);
+		ui.image(venus,x -170 ,y -20);
     }
 	
 }
