@@ -3,8 +3,7 @@ package ie.tudublin;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-
-public class Sun
+public class Planets
 {
     private float x;
     private float y;
@@ -12,10 +11,7 @@ public class Sun
     PApplet ui;
 	PImage sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune;
 	
-	
-	
-		
-    public Sun(PApplet ui, float x, float y, float diameter)
+    public Planets(PApplet ui, float x, float y, float diameter)
     {
         this.ui = ui;
         this.x = x;
@@ -29,8 +25,7 @@ public class Sun
 		jupiter = ui.loadImage("images/jupiter.png"); //70*70
 		saturn = ui.loadImage("images/saturn.png"); //55*55
 		uranus = ui.loadImage("images/uranus.png"); //35*35
-		neptune = ui.loadImage("images/neptune.png"); //35*35
-		
+		neptune = ui.loadImage("images/neptune.png"); //35*35		
     }    
 	
     
@@ -44,13 +39,8 @@ public class Sun
         ui.image(jupiter,x -290 ,y -35 );  
 		ui.image(saturn,x -350 ,y -27 );
 		ui.image(uranus,x -390 ,y -17 );
-		ui.image(neptune,x -430 ,y -17);
-		
-		
-		
-		
-    }
-	
+		ui.image(neptune,x -430 ,y -17);		
+    }	
 }
 
 

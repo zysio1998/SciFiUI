@@ -10,7 +10,7 @@ public class UI extends PApplet
     Radar r;
 	Ship s;
     PImage img;
-    Sun sun;
+    Planets planets;
 	Earth earth;
 
     boolean[] keys = new boolean[1024];
@@ -46,7 +46,7 @@ public class UI extends PApplet
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         r = new Radar(this, width / 2, height / 2, 200);
         s = new Ship(this, width / 2, height / 2, 80);
-        sun = new Sun(this, width / 2, height / 2, 150);
+        planets = new Planets(this, width / 2, height / 2, 150);
 		//earth = new Earth(this, 400, 650, width);
     }
 
@@ -66,7 +66,7 @@ public class UI extends PApplet
 		//s.update();
         //s.render();
         
-        sun.render();		
+        planets.render();		
 		//earth.update();
 		//earth.render();		
 		//earth.reset();
