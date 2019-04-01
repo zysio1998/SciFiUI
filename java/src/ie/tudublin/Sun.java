@@ -21,30 +21,30 @@ public class Sun
         this.x = x;
         this.y = y;
         this.diameter = diameter;     
-        sun = ui.loadImage("images/sun.png"); //150*150
-        mercury = ui.loadImage("images/mercury.png"); //25*25		
-		venus = ui.loadImage("images/venus.png"); //40*40		
-		earth = ui.loadImage("images/earth.png"); //40*40
-		mars = ui.loadImage("images/mars.png"); //30*30
-		jupiter = ui.loadImage("images/jupiter.png"); //75*75
-		saturn = ui.loadImage("images/saturn.png"); //60*60
-		uranus = ui.loadImage("images/uranus.png"); //40*40
-		neptune = ui.loadImage("images/neptune.png"); //40*40
+        sun = ui.loadImage("images/sun.png"); //140*140
+        mercury = ui.loadImage("images/mercury.png"); //20*20		
+		venus = ui.loadImage("images/venus.png"); //35*35		
+		earth = ui.loadImage("images/earth.png"); //35*35
+		mars = ui.loadImage("images/mars.png"); //25*25
+		jupiter = ui.loadImage("images/jupiter.png"); //70*70
+		saturn = ui.loadImage("images/saturn.png"); //55*55
+		uranus = ui.loadImage("images/uranus.png"); //35*35
+		neptune = ui.loadImage("images/neptune.png"); //35*35
 		
     }    
 	
     
     public void render()
     {        
-        ui.image(sun,x - 75,y - 75);
-		ui.image(mercury,x -110 ,y -12);
-		ui.image(venus,x -155 ,y -20);
-		ui.image(earth,x -200 ,y -20);
-		ui.image(mars,x -235 ,y -15);		
-        ui.image(jupiter,x -315 ,y -37 );  
-		ui.image(saturn,x -380 ,y -30 );
-		ui.image(uranus,x -425 ,y -20 );
-		ui.image(neptune,x -470 ,y -20 );
+        ui.image(sun,x - 75,y - 70);
+		ui.image(mercury,x -105 ,y -10);
+		ui.image(venus,x -145 ,y -17);
+		ui.image(earth,x -185 ,y -17);
+		ui.image(mars,x -215 ,y -12);		
+        ui.image(jupiter,x -290 ,y -35 );  
+		ui.image(saturn,x -350 ,y -27 );
+		ui.image(uranus,x -390 ,y -17 );
+		ui.image(neptune,x -430 ,y -17);
 		
 		
 		
