@@ -10,7 +10,7 @@ public class Sun
     private float y;
     private float diameter;
     PApplet ui;
-	PImage sun,mercury,venus,earth,mars,jupiter,saturn;
+	PImage sun,mercury,venus,earth,mars,jupiter,saturn,uranus;
 	
 	
 	
@@ -28,6 +28,7 @@ public class Sun
 		mars = ui.loadImage("images/mars.png"); //30*30
 		jupiter = ui.loadImage("images/jupiter.png"); //75*75
 		saturn = ui.loadImage("images/saturn.png"); //60*60
+		uranus = ui.loadImage("images/uranus.png"); //40*40
 		
     }    
 	
@@ -41,6 +42,7 @@ public class Sun
 		ui.image(mars,x -235 ,y -15);		
         ui.image(jupiter,x -315 ,y -37 );  
 		ui.image(saturn,x -380 ,y -30 );
+		ui.image(uranus,x -425 ,y -20 );
 		
 		
 		
