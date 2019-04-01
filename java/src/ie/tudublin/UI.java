@@ -47,7 +47,7 @@ public class UI extends PApplet
         r = new Radar(this, width / 2, height / 2, 200);
         s = new Ship(this, width / 2, height / 2, 80);
         sun = new Sun(this, width / 2, height / 2, 150);
-		earth = new Earth(this, 400, 650, width);
+		//earth = new Earth(this, 400, 650, width);
     }
 
     public void draw()
@@ -67,16 +67,14 @@ public class UI extends PApplet
         //s.render();
         
         sun.render();		
-		earth.update();
-		earth.render();
-		
-		
-		earth.reset();
+		//earth.update();
+		//earth.render();		
+		//earth.reset();
 		
 		
 		
-		line(0,450,1000,450);
-		line(500,0,500,900);
+		//line(0,450,1000,450);
+		//line(500,0,500,900);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
 		stroke(255,250,250);
