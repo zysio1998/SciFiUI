@@ -39,7 +39,7 @@ public class Earth
    
 	public void reset()
 	{
-       x = 450;
+       x = 460;
        y = 370;
 	}
 }

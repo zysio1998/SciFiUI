@@ -19,7 +19,7 @@ public class Sun
         this.x = x;
         this.y = y;
         this.diameter = diameter;     
-        sunny = ui.loadImage("images/sun.png");
+        sunny = ui.loadImage("images/sunny.png");
         mars = ui.loadImage("images/sun.png");
 		
     }    
@@ -27,7 +27,7 @@ public class Sun
     
     public void render()
     {        
-        ui.image(sunny,x - 50,y - 50);
+        ui.image(sunny,x - 75,y - 75);
         ui.image(mars,400,750);
     }
 	
