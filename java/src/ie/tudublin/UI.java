@@ -34,17 +34,16 @@ public class UI extends PApplet
 		size(1000, 900);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-        img = loadImage("images/background.jpg");    
-		//sun.sunny = loadImage("images/sun.png");		
+        img = loadImage("images/background.jpg");    		
     }
 
     public void setup()
     {	
 		b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
-        planets = new Planets(this, width / 2, height / 2, 150);
-		orbits = new Orbits(this, 400, 650, width);
-    }
+        //planets = new Planets(this, width / 2, height / 2, 150);
+		//orbits = new Orbits(this, 400, 650, width);
+	}
 
     public void draw()
     {
@@ -54,28 +53,20 @@ public class UI extends PApplet
 
         //mc.update();
         //mc.render();
-
-        //r.update();
-        //r.render();
-        //r.reset();
-		
-		//s.update();
-        //s.render();
         
-        planets.render();		
+        //planets.render();	
+		
+		orbits.render();
 	    orbits.update();
 		orbits.render();		
-		orbits.reset();
+		orbits.reset();	
 		
 		
-		
-		line(0,450,1000,450);
-		line(500,0,500,1000);
+		//line(0,450,1000,450);
+		//line(500,0,500,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
 		stroke(255,250,250);
-		
-		
 		
         
 
