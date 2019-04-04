@@ -41,8 +41,8 @@ public class UI extends PApplet
     {	
 		b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
-        //planets = new Planets(this, width / 2, height / 2, 150);
-		//orbits = new Orbits(this, 400, 650, width);
+        planets = new Planets(this, width / 2, height / 2, 150);
+		orbits = new Orbits(this, 400, 650, width);
 	}
 
     public void draw()
@@ -54,7 +54,7 @@ public class UI extends PApplet
         //mc.update();
         //mc.render();
         
-        //planets.render();	
+        planets.render();	
 		
 		orbits.render();
 	    orbits.update();
@@ -66,7 +66,7 @@ public class UI extends PApplet
 		//line(500,0,500,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
-		stroke(255,250,250);
+		//stroke(255,250,250);
 		
         
 
