@@ -8,7 +8,6 @@ public class UI extends PApplet
     Button b;
     MovingCircle mc;
     PImage img;
-    //Planets planets;
 	Orbits orbits;
 
     boolean[] keys = new boolean[1024];
@@ -41,7 +40,6 @@ public class UI extends PApplet
     {	
 		b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
-        //planets = new Planets(this, width / 2, height / 2, 150);
 		orbits = new Orbits(this, 400, 650, width);
 	}
 
@@ -56,17 +54,16 @@ public class UI extends PApplet
         
         //planets.render();	
 		
-		orbits.render();
 	    orbits.update();
 		orbits.render();		
 		orbits.reset();	
 		
 		
-		//line(0,450,1000,450);
-		//line(500,0,500,1000);
+		line(0,450,1000,450);
+		line(500,0,500,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
-		//stroke(255,250,250);
+		stroke(255,250,250);
 		
         
 
