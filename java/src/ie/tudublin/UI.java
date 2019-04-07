@@ -41,7 +41,7 @@ public class UI extends PApplet
     {	
 		b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
-        planets = new Planets(this, width / 2, height / 2, 150);
+        //planets = new Planets(this, width / 2, height / 2, 150);
 		orbits = new Orbits(this, 400, 650, width);
 	}
 
