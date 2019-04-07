@@ -4,26 +4,26 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 
-public class Orbits
+public class Orbits 
 {
     private float x;
     private float y;
-    //private float diameter;
+    private float diameter;
 	private float angle = 0;
     PApplet ui;
 	PImage earth;
-	private float radius;
-	
-		
+	private float radius;		
 	
     public Orbits(PApplet ui, float x, float y, float diameter)
     {
-        this.ui = ui;
-        this.x = x;
-        this.y = y;
-       // this.diameter = diameter;   //1000
+		//super(ui,earth,x,y,diameter);
+		this.ui = ui;
+		this.x = x;
+		this.y = y;
+		this.diameter = diameter;   //1000
 		radius = diameter / 2;  //500
 		earth = ui.loadImage("images/earth.png");	//40*40	
+		
     }    
 	
     

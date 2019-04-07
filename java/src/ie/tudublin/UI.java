@@ -34,8 +34,7 @@ public class UI extends PApplet
 		size(1000, 900);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-        img = loadImage("images/background.jpg");    
-		//sun.sunny = loadImage("images/sun.png");		
+        img = loadImage("images/background.jpg");    		
     }
 
     public void setup()
@@ -44,7 +43,7 @@ public class UI extends PApplet
         mc = new MovingCircle(this, width / 2, height / 2, 50);
         planets = new Planets(this, width / 2, height / 2, 150);
 		orbits = new Orbits(this, 400, 650, width);
-    }
+	}
 
     public void draw()
     {
@@ -53,11 +52,18 @@ public class UI extends PApplet
         //b.mouseClicked();
 
         //mc.update();
+<<<<<<< HEAD
         //mc.render();        
+=======
+        //mc.render();
+>>>>>>> d26d06fd6a71e4f06a891a5505adde95abd74077
         
-        planets.render();		
+        planets.render();	
+		
+		orbits.render();
 	    orbits.update();
 		orbits.render();		
+<<<<<<< HEAD
 		orbits.reset();			
 		
 		line(0,450,1000,450);
@@ -65,6 +71,18 @@ public class UI extends PApplet
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
 		stroke(255,250,250);       
+=======
+		orbits.reset();	
+		
+		
+		//line(0,450,1000,450);
+		//line(500,0,500,1000);
+		//ellipse(500,400,350,350);
+		//fill(255,250,250);
+		//stroke(255,250,250);
+		
+        
+>>>>>>> d26d06fd6a71e4f06a891a5505adde95abd74077
 
         if (checkKey(LEFT))
         {
