@@ -52,26 +52,13 @@ public class UI extends PApplet
         //b.mouseClicked();
 
         //mc.update();
-<<<<<<< HEAD
-        //mc.render();        
-=======
         //mc.render();
->>>>>>> d26d06fd6a71e4f06a891a5505adde95abd74077
         
         planets.render();	
 		
 		orbits.render();
 	    orbits.update();
 		orbits.render();		
-<<<<<<< HEAD
-		orbits.reset();			
-		
-		line(0,450,1000,450);
-		line(500,0,500,1000);
-		//ellipse(500,400,350,350);
-		//fill(255,250,250);
-		stroke(255,250,250);       
-=======
 		orbits.reset();	
 		
 		
@@ -82,7 +69,6 @@ public class UI extends PApplet
 		//stroke(255,250,250);
 		
         
->>>>>>> d26d06fd6a71e4f06a891a5505adde95abd74077
 
         if (checkKey(LEFT))
         {

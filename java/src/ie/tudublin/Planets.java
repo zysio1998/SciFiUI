@@ -15,7 +15,7 @@ public class Planets
     public Planets(PApplet ui,float x, float y, float diameter)
     {
         this.ui = ui;
-		this.earth = earth;
+		//this.earth = earth;
         this.x = x;
         this.y = y;
         this.diameter = diameter; 
