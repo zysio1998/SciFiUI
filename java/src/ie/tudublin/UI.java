@@ -8,7 +8,7 @@ public class UI extends PApplet
     Button b;
     MovingCircle mc;
     PImage img;
-    Planets planets;
+    //Planets planets;
 	Orbits orbits;
 
     boolean[] keys = new boolean[1024];
@@ -54,7 +54,7 @@ public class UI extends PApplet
         //mc.update();
         //mc.render();
         
-        planets.render();	
+        //planets.render();	
 		
 		orbits.render();
 	    orbits.update();

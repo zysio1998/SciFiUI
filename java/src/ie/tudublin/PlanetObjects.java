@@ -2,14 +2,14 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public abstract class Planets
+public abstract class PlanetObjects
 {
     protected float x;
     protected float y;
     protected float diameter;
     protected PApplet ui;
 		
-    public Planets(PApplet ui,float x, float y, float diameter)
+    public PlanetObjects(PApplet ui,float x, float y, float diameter)
     {
         this.ui = ui;
         this.x = x;

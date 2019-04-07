@@ -4,7 +4,7 @@ import processing.core.PApplet;
 import processing.core.PImage;
 
 
-public class Orbits extends Planets
+public class Orbits extends PlanetObjects
 {
     //private float x;
     //private float y;
