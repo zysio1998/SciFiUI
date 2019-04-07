@@ -53,31 +53,18 @@ public class UI extends PApplet
         //b.mouseClicked();
 
         //mc.update();
-        //mc.render();
-
-        //r.update();
-        //r.render();
-        //r.reset();
-		
-		//s.update();
-        //s.render();
+        //mc.render();        
         
         planets.render();		
 	    orbits.update();
 		orbits.render();		
-		orbits.reset();
-		
-		
+		orbits.reset();			
 		
 		line(0,450,1000,450);
 		line(500,0,500,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
-		stroke(255,250,250);
-		
-		
-		
-        
+		stroke(255,250,250);       
 
         if (checkKey(LEFT))
         {
