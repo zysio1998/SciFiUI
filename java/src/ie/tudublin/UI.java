@@ -56,7 +56,7 @@ public class UI extends PApplet
 		
 	    orbits.update();
 		orbits.render();		
-		orbits.reset();	
+		//orbits.reset();	
 		
 		
 		line(0,450,1000,450);
