@@ -2,12 +2,17 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PImage;
+import processing.core.PShape;
+
+
 
 public class UI extends PApplet
 {
     Button b;
     MovingCircle mc;
-    PImage img;
+	PImage img;
+	PImage jup;
+	PShape globe;
 	Orbits orbits;
 
     boolean[] keys = new boolean[1024];
@@ -30,10 +35,12 @@ public class UI extends PApplet
 
     public void settings()    
 	{	
-		size(1000, 900);
+		size(1000, 900,P3D);
         //Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
-        img = loadImage("images/background.jpg");    		
+		
+		//jup = loadImage("images/8k_jupiter.jpg");
+		   		
     }
 
     public void setup()
@@ -41,22 +48,34 @@ public class UI extends PApplet
 		b = new Button(this, 50, 50, 100, 50, "I am a button");
         mc = new MovingCircle(this, width / 2, height / 2, 50);
 		orbits = new Orbits(this, 400, 650, width);
+		img = loadImage("images/background.jpg"); 
+
+		jup = loadImage("images/8k_jupiter.jpg");
+		globe = createShape(SPHERE, 50);
+		globe.setTexture(jup);
 	}
 
     public void draw()
     {
-        background(img);
-        //b.render();
-        //b.mouseClicked();
-
-        //mc.update();
-        //mc.render();
+		background(img);
+		
+		
+		//pushMatrix();
+		// translate(width / 2, height / 2);
+		beginShape();
+		texture(jup);
+		// vertex(-100, -100, 0, 0,   0);
+		// vertex( 100, -100, 0, 400, 0);
+		// vertex( 100,  100, 0, 400, 400);
+		// vertex(-100,  100, 0, 0,   400);
+		endShape();
+		//popMatrix();
         
-        //planets.render();	
+        
 		
 	    orbits.update();
 		orbits.render();		
-		//orbits.reset();	
+		
 		
 		
 		//line(0,50,1000,50);
