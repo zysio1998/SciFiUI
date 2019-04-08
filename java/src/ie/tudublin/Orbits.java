@@ -5,15 +5,7 @@ import processing.core.PImage;
 
 public class Orbits extends PlanetObjects
 {
-    private float MercuryAngle;
-    private float VenusAngle;
-    private float EarthAngle; 
-    private float MarsAngle;
-    private float JupiterAngle;
-    private float SaturnAngle;
-    private float UranusAngle;
-    private float NeptuneAngle;
-       
+    private float MercuryAngle,VenusAngle,EarthAngle,MarsAngle,JupiterAngle,SaturnAngle,UranusAngle,NeptuneAngle;   
     private PImage sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune;
 	
     public Orbits(PApplet ui, float x,float y, float diameter)
@@ -88,7 +80,7 @@ public class Orbits extends PlanetObjects
 
     public void update()
     {       
-        MercuryAngle += 0.002; 
+        MercuryAngle += 0.009; 
         VenusAngle += 0.005; 
         EarthAngle += 0.003;  
         MarsAngle += 0.008;  
