@@ -2,75 +2,75 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PImage;
-import processing.core.PShape;
+//import processing.core.PShape;
 
 
 
 public class UI extends PApplet
 {
-    Button b;
-    MovingCircle mc;
-	PImage img;
-	PImage jup;
-	PShape globe;
-	Orbits orbits;
-
-    boolean[] keys = new boolean[1024];
-
-    public void keyPressed()
-    {
-        keys[keyCode] = true;
-    }
     
-    public void keyReleased()
-    {
-        keys[keyCode] = true;
-    }
+    
+	PImage img;
+	//PImage jup;
+	//PShape globe;
+	Orbits orbits;
+	
+	//Orbits jup;
+	PImage jupiterTexture;
 
-    public boolean checkKey(int c)
-    {
-        return keys[c] || keys [Character.toUpperCase(c)];
-    }
+    //boolean[] keys = new boolean[1024];
+
+    // public void keyPressed()
+    // {
+    //     keys[keyCode] = true;
+    // }
+    
+    // public void keyReleased()
+    // {
+    //     keys[keyCode] = true;
+    // }
+
+    // public boolean checkKey(int c)
+    // {
+    //     return keys[c] || keys [Character.toUpperCase(c)];
+    // }
     
 
     public void settings()    
 	{	
-		size(1000, 900,P3D);
+		size(1000, 900);
         //Use fullscreen instead of size to make your interface fullscreen
-        //fullScreen(); 
+		//fullScreen(); 
+		img = loadImage("images/background.jpg"); 
 		
-		//jup = loadImage("images/8k_jupiter.jpg");
-		   		
+		jupiterTexture = loadImage("images/8k_jupiter.jpg");		
     }
 
     public void setup()
     {	
-		b = new Button(this, 50, 50, 100, 50, "I am a button");
-        mc = new MovingCircle(this, width / 2, height / 2, 50);
-		orbits = new Orbits(this, 400, 650, width);
-		img = loadImage("images/background.jpg"); 
-
-		jup = loadImage("images/8k_jupiter.jpg");
-		globe = createShape(SPHERE, 50);
-		globe.setTexture(jup);
+		//b = new Button(this, 50, 50, 100, 50, "I am a button");
+		orbits = new Orbits(this,jupiterTexture, 400, 650, width);
+		//jup = new Orbits(this, 400, 650, width);
+		
+		
+		//jup = loadImage("images/earth-1617121_1920.jpg");
+		
 	}
 
     public void draw()
     {
 		background(img);
+
+		//shape(jup,50,50,50,50);
+		//noStroke();
+		//noFill();
+		//globe = createShape(SPHERE, 50);
+		//globe.setTexture(jup);
+		//shape(globe);
 		
 		
-		//pushMatrix();
-		// translate(width / 2, height / 2);
-		beginShape();
-		texture(jup);
-		// vertex(-100, -100, 0, 0,   0);
-		// vertex( 100, -100, 0, 400, 0);
-		// vertex( 100,  100, 0, 400, 400);
-		// vertex(-100,  100, 0, 0,   400);
-		endShape();
-		//popMatrix();
-        
+		
+		
         
 		
 	    orbits.update();
@@ -121,10 +121,10 @@ public class UI extends PApplet
 		
         
 
-        if (checkKey(LEFT))
-        {
-            System.out.println("Left arrow key pressed");
-        }
+        // if (checkKey(LEFT))
+        // {
+        //     System.out.println("Left arrow key pressed");
+        // }
     }
 }
 
