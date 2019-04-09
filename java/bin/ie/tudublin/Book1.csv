@@ -1,0 +1,2 @@
+PlanetName,PlanetSize,PlanetMass,PlanetPopulation,AmountOfMoons,TimeOfOrbitAroundSun,DistanceFromSun,RankingOfSize,PlanetTemp,PlanetClimate,Gravity
+Mercury,"4,878 km",3.285 × 10^23 kg,1,0,87.97 days,57.91 million km,Smallest,,,

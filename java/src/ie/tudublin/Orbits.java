@@ -13,7 +13,7 @@ public class Orbits extends PlanetObjects
    
    // PShape globe;
 
-    public Orbits(PApplet ui, PImage jupiterTexture, float x,float y, float diameter)
+    public Orbits(PApplet ui, float x,float y, float diameter)
     {
 		super(ui,x,y,diameter);
         sun = ui.loadImage("images/sun.png"); //100*100
@@ -108,6 +108,8 @@ public class Orbits extends PlanetObjects
         UranusAngle += 0.002;
         NeptuneAngle += 0.005;
        // ui.shape(globe);
+        
+        
     }
 }
    

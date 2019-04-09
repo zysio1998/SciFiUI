@@ -2,7 +2,10 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PImage;
+//import processing.opengl.*;
+//import processing.opengl.*;
 //import processing.core.PShape;
+//import processing.opengl.PGraphics3D;
 
 
 
@@ -16,7 +19,7 @@ public class UI extends PApplet
 	Orbits orbits;
 	
 	//Orbits jup;
-	PImage jupiterTexture;
+	//PImage jupiterTexture;
 
     //boolean[] keys = new boolean[1024];
 
@@ -39,18 +42,23 @@ public class UI extends PApplet
     public void settings()    
 	{	
 		size(1000, 900);
+		//size(1000, 900, "processing.opengl.PGraphics3D");
+
         //Use fullscreen instead of size to make your interface fullscreen
 		//fullScreen(); 
-		img = loadImage("images/background.jpg"); 
+		img = loadImage("images/background.jpg");
 		
-		jupiterTexture = loadImage("images/8k_jupiter.jpg");		
+		
+		//jupiterTexture = loadImage("images/8k_jupiter.jpg");		
     }
 
     public void setup()
     {	
+	
 		//b = new Button(this, 50, 50, 100, 50, "I am a button");
-		orbits = new Orbits(this,jupiterTexture, 400, 650, width);
+		orbits = new Orbits(this, 400, 650, width);
 		//jup = new Orbits(this, 400, 650, width);
+		
 		
 		
 		//jup = loadImage("images/earth-1617121_1920.jpg");
@@ -60,6 +68,13 @@ public class UI extends PApplet
     public void draw()
     {
 		background(img);
+		// stroke(255, 50);
+		// translate(50, 50, 0);
+		// rotateX((float) (mouseY * 0.05));
+		// rotateY((float) (mouseX * 0.05));
+		// fill(mouseX * 2, 0, 160);
+		// sphereDetail(mouseX / 4);
+		// sphere(40);
 
 		//shape(jup,50,50,50,50);
 		//noStroke();
@@ -67,6 +82,12 @@ public class UI extends PApplet
 		//globe = createShape(SPHERE, 50);
 		//globe.setTexture(jup);
 		//shape(globe);
+
+		// noStroke();
+        // lights();
+        // translate(500, 450, 5);
+        // fill(255,0,0);
+        // sphere(100);
 		
 		
 		
@@ -117,7 +138,7 @@ public class UI extends PApplet
 		//line(1000,0,1000,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
-		stroke(255,250,250);
+		//stroke(255,250,250);
 		
         
 
