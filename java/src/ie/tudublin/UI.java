@@ -41,7 +41,7 @@ public class UI extends PApplet
 
     public void settings()
     {
-        size(800, 800);
+        size(800, 800,P3D);
         // Use fullscreen instead of size to make your interface fullscreen
         //fullScreen(); 
     }
@@ -61,7 +61,7 @@ public class UI extends PApplet
 
     public void draw()
     {
-		background(img);
+		background(0);
 		// stroke(255, 50);
 		// translate(50, 50, 0);
 		// rotateX((float) (mouseY * 0.05));
