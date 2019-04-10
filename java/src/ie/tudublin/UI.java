@@ -61,7 +61,7 @@ public class UI extends PApplet
 
     public void draw()
     {
-		background(img);
+		background(0);
 		// stroke(255, 50);
 		// translate(50, 50, 0);
 		// rotateX((float) (mouseY * 0.05));
