@@ -9,9 +9,9 @@ public class MovingCircle
     private float y;
     private float diameter;
     private float radius;
-    PApplet ui;
+    UI ui;
 
-    public MovingCircle(PApplet ui, float x, float y, float diameter)
+    public MovingCircle(UI ui, float x, float y, float diameter)
     {
         this.ui = ui;
         this.x = x;

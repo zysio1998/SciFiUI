@@ -39,17 +39,11 @@ public class UI extends PApplet
     // }
     
 
-    public void settings()    
-	{	
-		size(1000, 900);
-		//size(1000, 900, "processing.opengl.PGraphics3D");
-
-        //Use fullscreen instead of size to make your interface fullscreen
-		//fullScreen(); 
-		img = loadImage("images/background.jpg");
-		
-		
-		//jupiterTexture = loadImage("images/8k_jupiter.jpg");		
+    public void settings()
+    {
+        size(800, 800);
+        // Use fullscreen instead of size to make your interface fullscreen
+        //fullScreen(); 
     }
 
     public void setup()
