@@ -41,9 +41,11 @@ public class UI extends PApplet
 
     public void settings()
     {
-        size(800, 800,P3D);
+		img = loadImage("images/background.jpg");
+        size(1000,900,P3D);
         // Use fullscreen instead of size to make your interface fullscreen
-        //fullScreen(); 
+		//fullScreen();
+		
     }
 
     public void setup()
@@ -53,15 +55,15 @@ public class UI extends PApplet
 		orbits = new Orbits(this, 400, 650, width);
 		//jup = new Orbits(this, 400, 650, width);
 		
-		
-		
-		//jup = loadImage("images/earth-1617121_1920.jpg");
-		
 	}
 
     public void draw()
     {
-		background(0);
+		background(img);
+		//set(0,0,img);
+		//image(img,0,0,width,height);
+
+
 		// stroke(255, 50);
 		// translate(50, 50, 0);
 		// rotateX((float) (mouseY * 0.05));
@@ -84,14 +86,10 @@ public class UI extends PApplet
         // sphere(100);
 		
 		
-		
-		
-        
-		
+	
 	    orbits.update();
 		orbits.render();		
-		
-		
+
 		
 		//line(0,50,1000,50);
 		//line(0,100,1000,100);
