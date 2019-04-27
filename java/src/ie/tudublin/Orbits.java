@@ -2,16 +2,16 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PImage;
-//import processing.core.PShape;
+
 
 public class Orbits extends PlanetObjects
 {
     
     private float MercuryAngle, VenusAngle, EarthAngle, MarsAngle, JupiterAngle, SaturnAngle, UranusAngle, NeptuneAngle;
     private PImage sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune;
-    
+    private float radius;
+    private PImage[] textures = new PImage[9];  
    
-   // PShape globe;
 
     public Orbits(PApplet ui, float x,float y, float diameter)
     {
@@ -25,15 +25,17 @@ public class Orbits extends PlanetObjects
 		saturn = ui.loadImage("images/saturn.png"); //55*55
 		uranus = ui.loadImage("images/uranus.png"); //35*35
         neptune = ui.loadImage("images/neptune.png"); //35*35	
-        
-        
 
-        
-        
-        // ui.noStroke();
-        // ui.noFill();
-		// globe = ui.createShape(ui.SPHERE,50);
-		// globe.setTexture(jupiterTexture);
+        textures[0] = ui.loadImage("images/sun.jpg");
+        textures[1] = ui.loadImage("images/mercury.jpg");
+        textures[2] = ui.loadImage("images/venus.jpg");
+        textures[3] = ui.loadImage("images/earth.jpg");
+        textures[4] = ui.loadImage("images/mars.jpg");
+        textures[5] = ui.loadImage("images/jupiter.jpg");
+        textures[6] = ui.loadImage("images/saturn.jpg");
+        textures[7] = ui.loadImage("images/uranus.jpg");
+        textures[8] = ui.loadImage("images/neptune.jpg");
+    
         
 
         
@@ -115,7 +117,7 @@ public class Orbits extends PlanetObjects
         SaturnAngle += 0.008;
         UranusAngle += 0.002;
         NeptuneAngle += 0.005;
-       // ui.shape(globe);
+       
         
         
     }

@@ -2,10 +2,6 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 import processing.core.PImage;
-//import processing.opengl.*;
-//import processing.opengl.*;
-//import processing.core.PShape;
-//import processing.opengl.PGraphics3D;
 
 
 
@@ -14,8 +10,6 @@ public class UI extends PApplet
     
     
 	PImage img;
-	//PImage jup;
-	//PShape globe;
 	Orbits orbits;
 	
 	//Orbits jup;
@@ -60,34 +54,9 @@ public class UI extends PApplet
     public void draw()
     {
 		background(0);
-		//set(0,0,img);
-		//image(img,0,0,width,height);
-
-
 		
 
 
-		// stroke(255, 50);
-		// translate(50, 50, 0);
-		// rotateX((float) (mouseY * 0.05));
-		// rotateY((float) (mouseX * 0.05));
-		// fill(mouseX * 2, 0, 160);
-		// sphereDetail(mouseX / 4);
-		// sphere(40);
-
-		//shape(jup,50,50,50,50);
-		//noStroke();
-		//noFill();
-		//globe = createShape(SPHERE, 50);
-		//globe.setTexture(jup);
-		//shape(globe);
-
-		// noStroke();
-        // lights();
-        // translate(500, 450, 5);
-        // fill(255,0,0);
-        // sphere(100);
-		
 		
 	
 	    orbits.update();
