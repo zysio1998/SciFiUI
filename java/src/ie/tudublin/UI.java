@@ -59,9 +59,12 @@ public class UI extends PApplet
 
     public void draw()
     {
-		background(img);
+		background(0);
 		//set(0,0,img);
 		//image(img,0,0,width,height);
+
+
+		
 
 
 		// stroke(255, 50);

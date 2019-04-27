@@ -92,7 +92,15 @@ public class Orbits extends PlanetObjects
         ui.translate(500, 450); 
         ui.rotate(NeptuneAngle);   
         ui.image(neptune,-323,-323);     
-        ui.popMatrix();  	
+        ui.popMatrix();  
+        
+
+
+
+        ui.noStroke();
+		ui.lights();
+		ui.translate(200, 200);
+		ui.sphere(150);
 
         
     }
