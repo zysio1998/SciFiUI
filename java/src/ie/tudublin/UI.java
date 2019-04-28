@@ -11,6 +11,8 @@ public class UI extends PApplet
     
 	PImage img;
 	Orbits orbits;
+
+	PImage[] textures = new PImage[8]; 
 	
 	//Orbits jup;
 	//PImage jupiterTexture;
@@ -35,18 +37,28 @@ public class UI extends PApplet
 
     public void settings()
     {
-		img = loadImage("images/background.jpg");
+		
         size(1000,900,P3D);
         // Use fullscreen instead of size to make your interface fullscreen
 		//fullScreen();
 		
+		img = loadImage("images/sun.jpg");
+		textures[0] = loadImage("images/mercury.jpg");
+        textures[1] = loadImage("images/venus.jpg");
+        textures[2] = loadImage("images/earth.jpg");
+        textures[3] = loadImage("images/mars.jpg");
+        textures[4] = loadImage("images/jupiter.jpg");
+        textures[5] = loadImage("images/saturn.jpg");
+        textures[6] = loadImage("images/uranus.jpg");
+        textures[7] = loadImage("images/neptune.jpg");
+        		
     }
 
     public void setup()
     {	
 	
 		//b = new Button(this, 50, 50, 100, 50, "I am a button");
-		orbits = new Orbits(this, 400, 650, width);
+		orbits = new Orbits(this, 400, 650, width,img);
 		//jup = new Orbits(this, 400, 650, width);
 		
 	}
@@ -55,7 +67,8 @@ public class UI extends PApplet
     {
 		background(0);
 		
-
+		ambientLight(255,255,255);
+  		pointLight(255, 255, 255, 0, 0, 0);
 
 		
 	
