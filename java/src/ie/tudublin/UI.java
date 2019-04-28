@@ -58,7 +58,7 @@ public class UI extends PApplet
     {	
 	
 		//b = new Button(this, 50, 50, 100, 50, "I am a button");
-		orbits = new Orbits(this, 400, 650, width,img);
+		orbits = new Orbits(this, 400, 650, width);
 		//jup = new Orbits(this, 400, 650, width);
 		
 	}

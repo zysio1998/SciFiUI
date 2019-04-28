@@ -10,12 +10,12 @@ public class Orbits extends PlanetObjects
     
     private float MercuryAngle, VenusAngle, EarthAngle, MarsAngle, JupiterAngle, SaturnAngle, UranusAngle, NeptuneAngle;
     private PImage sun,mercury,venus,earth,mars,jupiter,saturn,uranus,neptune;
-    // private float radius;
-     
-    // private PShape globe;
+    private float radius;
+    private PImage img;
+    private PShape globe;
    
 
-    public Orbits(PApplet ui, float x,float y, float diameter,PImage img)
+    public Orbits(PApplet ui, float x,float y, float diameter)
     {
 		super(ui,x,y,diameter);
         sun = ui.loadImage("images/sun.png"); //100*100
@@ -28,10 +28,7 @@ public class Orbits extends PlanetObjects
 		uranus = ui.loadImage("images/uranus.png"); //35*35
         neptune = ui.loadImage("images/neptune.png"); //35*35	
 
-        
-    
-        
-
+        img = ui.loadImage("images/sun.jpg");
         
     }    
 
@@ -93,19 +90,15 @@ public class Orbits extends PlanetObjects
 
 
 
-        ui.noStroke();
-        //ui.noFill();
-		ui.lights();
-		ui.translate(200, 200);
-        ui.sphere(150);
-        //ui.textures[0];
-
-
         // ui.noStroke();
-        // ui.noFill();
-        // globe = ui.createShape(ui.SPHERE, radius);
-        // globe.setTextureMode(0);
-        
+        // //ui.noFill();
+		// ui.lights();
+		// ui.translate(200, 200);
+        // ui.sphere(150);
+        // //ui.textures[0];
+
+        NeptuneAngle += 0.005;
+        ui.shape(globe);
     }
 
     public void update()
@@ -119,8 +112,16 @@ public class Orbits extends PlanetObjects
         UranusAngle += 0.002;
         NeptuneAngle += 0.005;
        
+        ui.pushMatrix();
         
-        
+        ui.noStroke();
+        //ui.noFill();
+        ui.translate(500, 400);
+        globe = ui.createShape(ui.SPHERE, 150);
+     
+        globe.setTexture(img);
+        ui.rotate(NeptuneAngle);  
+        ui.popMatrix();
     }
 }
    
