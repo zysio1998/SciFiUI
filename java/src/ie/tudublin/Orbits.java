@@ -81,37 +81,37 @@ public class Orbits extends PlanetObjects {
         ui.pushMatrix();
         ui.translate(halfWidth, halfHeight);
         ui.rotate(VenusAngle);
-        ui.image(venus, -84, -84);
+        ui.image(venus, 48, 48);
         ui.popMatrix();
 
         ui.pushMatrix();
         ui.translate(halfWidth, halfHeight);
         ui.rotate(EarthAngle);
-        ui.image(earth,-110,-110);
+        ui.image(earth,90,-90);
         ui.popMatrix();
 
         ui.pushMatrix();
         ui.translate(halfWidth, halfHeight);
         ui.rotate(MarsAngle);
-        ui.image(mars,-129,-129);
+        ui.image(mars,-114,114);
         ui.popMatrix();
 
         ui.pushMatrix();
         ui.translate(halfWidth, halfHeight);
         ui.rotate(JupiterAngle);
-        ui.image(jupiter,-187,-187);
+        ui.image(jupiter,-247,-35);
         ui.popMatrix();
 
         ui.pushMatrix();
         ui.translate(halfWidth, halfHeight);
         ui.rotate(SaturnAngle);
-        ui.image(saturn,-225,-225);
+        ui.image(saturn,-27,-305);
         ui.popMatrix();
 
         ui.pushMatrix();
         ui.translate(halfWidth, halfHeight);
         ui.rotate(UranusAngle);
-        ui.image(uranus,-248,-248);
+        ui.image(uranus,-17,310);
         ui.popMatrix();
 
         ui.pushMatrix();
@@ -131,14 +131,14 @@ public class Orbits extends PlanetObjects {
 
     public void update()
     {       
-        MercuryAngle += 0.01; 
-        VenusAngle += 0.01; 
-        EarthAngle += 0.01;  
-        MarsAngle += 0.01;  
-        JupiterAngle += 0.01;
-        SaturnAngle += 0.01;
-        UranusAngle += 0.01;
-        NeptuneAngle += 0.01;
+        MercuryAngle += 0.002; 
+        VenusAngle += 0.003; 
+        EarthAngle += 0.005;  
+        MarsAngle += 0.007;  
+        JupiterAngle += 0.005;
+        SaturnAngle += 0.008;
+        UranusAngle += 0.006;
+        NeptuneAngle += 0.004;
 
        // ui.shape(globe);
       //  ui.shape(globe2);
