@@ -6,15 +6,17 @@ public abstract class PlanetObjects
 {
     protected float x;
     protected float y;
-    protected float diameter;
+    protected float width;
+    protected float height;
     protected PApplet ui;
 		
-    public PlanetObjects(PApplet ui,float x, float y, float diameter)
+    public PlanetObjects(PApplet ui,float x, float y, float width, float height)
     {
         this.ui = ui;
         this.x = x;
         this.y = y;
-        this.diameter = diameter; 
+        this.width = width; 
+        this.height = height;
     }
 
     public abstract void update(); 
@@ -50,17 +52,17 @@ public abstract class PlanetObjects
     }
 
     /**
-     * @return the diameter
+     * @return the width
      */
-    public float getDiameter() {
-        return diameter;
+    public float getWidth() {
+        return width;
     }
 
     /**
-     * @param diameter the diameter to set
+     * @param width the diameter to set
      */
-    public void setDiameter(float diameter) {
-        this.diameter = diameter;
+    public void setWidth(float width) {
+        this.width = width;
     }
 
     /**
@@ -75,6 +77,20 @@ public abstract class PlanetObjects
      */
     public void setUi(PApplet ui) {
         this.ui = ui;
+    }
+
+    /**
+     * @return the height
+     */
+    public float getHeight() {
+        return height;
+    }
+
+    /**
+     * @param height the height to set
+     */
+    public void setHeight(float height) {
+        this.height = height;
     }
 }
 
