@@ -115,7 +115,7 @@ public class Orbits extends PlanetObjects
         ui.pushMatrix();
         
         ui.noStroke();
-        //ui.noFill();
+        ui.noFill();
         ui.translate(500, 400);
         globe = ui.createShape(ui.SPHERE, 150);
      
