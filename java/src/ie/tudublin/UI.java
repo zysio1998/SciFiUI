@@ -12,6 +12,7 @@ public class UI extends PApplet
 	//PImage img;
 	Orbits orbits;
 	PlanetDisplay planetDisplay;
+	Zooming zooming;
 
 	
 	
@@ -54,7 +55,8 @@ public class UI extends PApplet
 		//b = new Button(this, 50, 50, 100, 50, "I am a button");
 		orbits = new Orbits(this,0,0, width,height);
 		planetDisplay = new PlanetDisplay(this,0,0,width,height);
-		//jup = new Orbits(this, 400, 650, width);
+		zooming = new Zooming(this,0,0,width,height);
+		
 
 		
 	}
@@ -73,6 +75,8 @@ public class UI extends PApplet
 		orbits.update();
 		
 		planetDisplay.render();
+
+		zooming.rectangles();
 
 		
 		// line(0,50,1000,50);

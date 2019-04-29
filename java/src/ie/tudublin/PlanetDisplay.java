@@ -25,12 +25,10 @@ public class PlanetDisplay extends PlanetObjects
        
         screenWidth = width/8;
         screenHeight = height/9;
-
     }
 
     public void render()
-    {   
-        
+    {           
         ui.image(sun,screenWidth - 50,(screenHeight) -20);
         ui.image(mercury,screenWidth - 10,(screenHeight * 2)+30);
         ui.image(venus,screenWidth - 17,(screenHeight * 3) -10);
@@ -40,20 +38,11 @@ public class PlanetDisplay extends PlanetObjects
         ui.image(saturn,screenWidth - 27,(screenHeight * 7) -75);
         ui.image(uranus,screenWidth - 17,(screenHeight * 8) - 70);
         ui.image(neptune,screenWidth - 17,(screenHeight * 9) -90);
-
-
-
-
-
-
     }
-
 
     public void update()
     {
 
     }
-
-
 
 }
