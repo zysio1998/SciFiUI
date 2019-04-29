@@ -11,6 +11,7 @@ public class UI extends PApplet
     
 	//PImage img;
 	Orbits orbits;
+	PlanetDisplay planetDisplay;
 
 	
 	
@@ -42,7 +43,7 @@ public class UI extends PApplet
         // Use fullscreen instead of size to make your interface fullscreen
 		fullScreen(P3D);
 		
-		//img = loadImage("images/sun.jpg");
+		
 		
         		
     }
@@ -51,7 +52,8 @@ public class UI extends PApplet
     {	
 	
 		//b = new Button(this, 50, 50, 100, 50, "I am a button");
-		orbits = new Orbits(this, 400, 650, width,height);
+		orbits = new Orbits(this,0,0, width,height);
+		planetDisplay = new PlanetDisplay(this,0,0,width,height);
 		//jup = new Orbits(this, 400, 650, width);
 
 		
@@ -68,7 +70,9 @@ public class UI extends PApplet
 	
 	    
 		orbits.render();	
-		orbits.update();	
+		orbits.update();
+		
+		planetDisplay.render();
 
 		
 		// line(0,50,1000,50);
@@ -110,6 +114,7 @@ public class UI extends PApplet
 		// line(1000,0,1000,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
+		line(width/8,0,width/8,height);
 		
 		line(width/2,0,width/2,height);
 		line(0,height/2,width,height/2);

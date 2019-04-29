@@ -17,7 +17,8 @@ public class Zooming extends PlanetObjects
     private PImage[] textures = new PImage[8];
 
 
-    public Zooming(PApplet ui, float x, float y, float width,float height) {
+    public Zooming(PApplet ui, float x, float y, float width,float height) 
+    {
         super(ui, x, y, width,height);
 
 
@@ -69,7 +70,7 @@ public class Zooming extends PlanetObjects
 
     public void update()
     {
-
+        
     }
 
 

@@ -10,7 +10,8 @@ public class Orbits extends PlanetObjects {
     private float halfWidth;
     private float halfHeight;    
 
-    public Orbits(PApplet ui, float x, float y, float width,float height) {
+    public Orbits(PApplet ui, float x, float y, float width,float height)
+     {
         super(ui, x, y, width,height);
 
         sun = ui.loadImage("images/sun.png"); // 100*100
