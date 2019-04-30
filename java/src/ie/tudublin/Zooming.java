@@ -220,7 +220,7 @@ public class Zooming extends PlanetObjects
     public void writing()
     {
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-        ui.text("Click a planet for more Information",xrect,yrect - 35);
+        ui.text("Click a planet for more Information",xrect,yrect - 45);
         ui.textSize(15);
         
       
