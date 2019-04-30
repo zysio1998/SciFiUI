@@ -22,15 +22,15 @@ public class Zooming extends PlanetObjects
     {
         super(ui, x, y, width,height);
 
-        sun = ui.loadImage("images/sun.png"); // 100*100
-        mercury = ui.loadImage("images/mercury.png"); // 20*20
-        venus = ui.loadImage("images/venus.png"); // 35*35
-        earth = ui.loadImage("images/earth.png"); // 35*35
-        mars = ui.loadImage("images/mars.png"); // 25*25
-        jupiter = ui.loadImage("images/jupiter.png"); // 70*70
-        saturn = ui.loadImage("images/saturn.png"); // 55*55
-        uranus = ui.loadImage("images/uranus.png"); // 35*35
-        neptune = ui.loadImage("images/neptune.png"); // 35*35       
+        sun = ui.loadImage("images/sun2.png"); // 100*100
+        mercury = ui.loadImage("images/mercury2.png"); // 20*20
+        venus = ui.loadImage("images/venus2.png"); // 35*35
+        earth = ui.loadImage("images/earth2.png"); // 35*35
+        mars = ui.loadImage("images/mars2.png"); // 25*25
+        jupiter = ui.loadImage("images/jupiter2.png"); // 70*70
+        saturn = ui.loadImage("images/saturn2.png"); // 55*55
+        uranus = ui.loadImage("images/uranus2.png"); // 35*35
+        neptune = ui.loadImage("images/neptune2.png"); // 35*35       
 
         xrect = width/8;
         yrect = height/9;    
@@ -94,39 +94,111 @@ public class Zooming extends PlanetObjects
     {
         if(a % 2 != 0)
         {
-            ui.image(sun,xrect +200,yrect);
+            ui.image(sun,xrect*5,yrect*2.5f);
+            b = 0;
+            c = 0;
+            d = 0;
+            e = 0;
+            f = 0;
+            g = 0;
+            h = 0;
+            i = 0;
         }
         else if(b % 2 != 0)
         {
-            ui.image(mercury,xrect +200,yrect -50);
+            ui.image(mercury,xrect*5,yrect*2.5f);
+            a = 0;
+            c = 0;
+            d = 0;
+            e = 0;
+            f = 0;
+            g = 0;
+            h = 0;
+            i = 0;
         }
         else if(c % 2 != 0)
         {
-            ui.image(venus,xrect +300,yrect -150);
+            ui.image(venus,xrect*5,yrect*2.5f);
+            a = 0;
+            b = 0;
+            d = 0;
+            e = 0;
+            f = 0;
+            g = 0;
+            h = 0;
+            i = 0;
         }
         else if(d % 2 != 0)
         {
-            ui.image(earth,xrect +500,yrect -50);
+            ui.image(earth,xrect*5,yrect*2.5f);
+            a = 0;
+            b = 0;
+            c = 0;
+            e = 0;
+            f = 0;
+            g = 0;
+            h = 0;
+            i = 0;
         }
         else if(e % 2 != 0)
         {
-            ui.image(mars,xrect +600,yrect -50);
+            ui.image(mars,xrect*5,yrect*2.5f);
+            a = 0;
+            b = 0;
+            c = 0;
+            d = 0;
+            f = 0;
+            g = 0;
+            h = 0;
+            i = 0;
         }
         else if(f % 2 != 0)
         {
-            ui.image(jupiter,xrect +700,yrect -50);
+            ui.image(jupiter,xrect*5,yrect*2.5f);
+            a = 0;
+            b = 0;
+            c = 0;
+            d = 0;
+            e = 0;
+            g = 0;
+            h = 0;
+            i = 0;
         }
         else if(g % 2 != 0)
         {
-            ui.image(saturn,xrect +500,yrect -150);
+            ui.image(saturn,xrect*5,yrect*2.5f);
+            a = 0;
+            b = 0;
+            c = 0;
+            d = 0;
+            e = 0;
+            f = 0;
+            h = 0;
+            i = 0;
         } 
         else if(h % 2 != 0)
         {
-            ui.image(uranus,xrect +600,yrect -150);
+            ui.image(uranus,xrect*5,yrect*2.5f);
+            a = 0;
+            b = 0;
+            c = 0;
+            d = 0;
+            e = 0;
+            f = 0;
+            g = 0;
+            i = 0;
         }
         else if(i % 2 != 0)
         {
-            ui.image(neptune,xrect +700,yrect -150);
+            ui.image(neptune,xrect*5,yrect*2.5f);
+            a = 0;
+            b = 0;
+            c = 0;
+            d = 0;
+            e = 0;
+            f = 0;
+            g = 0;
+            h = 0;
         }
     }
 
@@ -147,6 +219,10 @@ public class Zooming extends PlanetObjects
 
     public void writing()
     {
+        ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+        ui.text("Click a planet for more Information",xrect,yrect - 35);
+        ui.textSize(15);
+        
       
 
         

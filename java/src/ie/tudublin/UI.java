@@ -75,6 +75,7 @@ public class UI extends PApplet
 		planetDisplay.render();
 
 		zooming.rectangles();
+		zooming.writing();
 		
 		zooming.render();
 		zooming.update();
