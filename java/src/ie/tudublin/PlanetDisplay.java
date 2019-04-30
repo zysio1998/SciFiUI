@@ -23,12 +23,13 @@ public class PlanetDisplay extends PlanetObjects
         uranus = ui.loadImage("images/uranus.png"); // 35*35
         neptune = ui.loadImage("images/neptune.png"); // 35*35   
        
-        screenWidth = width/8;
-        screenHeight = height/9;
+        screenWidth = width/8; // divides the screen width by 8
+        screenHeight = height/9; 
     }
 
     public void render()
     {           
+        // load an image
         ui.image(sun,screenWidth - 50,(screenHeight) -20);
         ui.image(mercury,screenWidth - 10,(screenHeight * 2)+30);
         ui.image(venus,screenWidth - 17,(screenHeight * 3) -10);

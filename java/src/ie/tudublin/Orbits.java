@@ -12,8 +12,9 @@ public class Orbits extends PlanetObjects {
 
     public Orbits(PApplet ui, float x, float y, float width,float height)
      {
-        super(ui, x, y, width,height);
+        super(ui, x, y, width,height);  // calls the variables from the super class
 
+        //this is used to load an image into a variable
         sun = ui.loadImage("images/sun.png"); // 100*100
         mercury = ui.loadImage("images/mercury.png"); // 20*20
         venus = ui.loadImage("images/venus.png"); // 35*35
@@ -31,8 +32,8 @@ public class Orbits extends PlanetObjects {
 
     public void render() 
     {      
-        ui.pushMatrix();
-        ui.translate(halfWidth -50, halfHeight -50);
+        ui.pushMatrix(); //kind of like brackets do this between the push and pop
+        ui.translate(halfWidth -50, halfHeight -50);  // -50 because the image is 100*100 pixels and image starts from the top left corner, so to get the middle you take away -50
         ui.image(sun,0,0);
         ui.popMatrix();
 
@@ -87,7 +88,7 @@ public class Orbits extends PlanetObjects {
 
     public void update()
     {       
-        MercuryAngle += 0.002; 
+        MercuryAngle += 0.002;  // speed of the roattion of the planets
         VenusAngle += 0.003; 
         EarthAngle += 0.005;  
         MarsAngle += 0.007;  

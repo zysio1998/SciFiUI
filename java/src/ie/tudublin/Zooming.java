@@ -1,7 +1,6 @@
 package ie.tudublin;
 
 import java.util.ArrayList;
-
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.data.TableRow;
@@ -24,7 +23,7 @@ public class Zooming extends Info
     private int g = 0;
     private int h = 0;
     private int i = 0;  
-    private ArrayList<Info> infos = new ArrayList<Info>();    
+    private ArrayList<Info> infos = new ArrayList<Info>();    //store csv data array 
 
     private String csv[] = {"","","","","","","","","","",""};
     private String headers[] = {"Diameter of Planet: ","Mass of Planet: ","Population of Planet: ","Amount of Moons: ",
@@ -38,8 +37,7 @@ public class Zooming extends Info
     private String jupiterdetails[] = {"","","","","","","","","",""};
     private String saturndetails[] = {"","","","","","","","","",""};
     private String uranusdetails[] = {"","","","","","","","","",""};
-    private String neptunedetails[] = {"","","","","","","","","",""};
-    
+    private String neptunedetails[] = {"","","","","","","","","",""};    
      
     public Zooming(PApplet ui, float width,float height) 
     {
@@ -73,10 +71,10 @@ public class Zooming extends Info
             infos.add(info);      
         }
     }
-
     
 public void render()
     {
+        //buttons
         if(ui.mousePressed)
         {
             if(ui.mouseX > xrect-50 && ui.mouseX < xrect +50 && ui.mouseY > yrect -20 && ui.mouseY < yrect +80)
@@ -137,16 +135,13 @@ public void render()
         if(a % 2 != 0)
         {
             boxes();  
-
             ui.image(sun,xrect*5,yrect*1.5f);       
 
             rowNum = 0; 
-
             for(int z = 0; z <10; z++ )
             { 
                 sundetails[z] = csv[z];           
-            }
-            
+            }            
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -157,8 +152,7 @@ public void render()
             {
                 ui.text(headers[v] + sundetails[v+1],x,y + gap);
                 gap = gap +40;
-            }
-            
+            }            
             ui.textSize(15);
 
             b = 0;
@@ -174,13 +168,12 @@ public void render()
         {
             boxes();
             ui.image(mercury,xrect*5,yrect*1.5f);
-            rowNum = 1;
-            
+
+            rowNum = 1;            
             for(int z = 0; z <10; z++ )
             {            
                 mercurydetails[z] = csv[z];                 
-            }
-            
+            }            
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -207,12 +200,12 @@ public void render()
         {
             boxes();
             ui.image(venus,xrect*5,yrect*1.5f);
+
             rowNum = 2;
             for(int z = 0; z <10; z++ )
             {
                 venusdetails[z] = csv[z];            
             }
-
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -245,7 +238,6 @@ public void render()
             {
                 earthdetails[z] = csv[z];            
             }
-
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -278,7 +270,6 @@ public void render()
             {
                 marsdetails[z] = csv[z];            
             }
-
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -311,7 +302,6 @@ public void render()
             {
                 jupiterdetails[z] = csv[z];            
             }
-
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -344,7 +334,6 @@ public void render()
             {
                 saturndetails[z] = csv[z];            
             }
-
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -377,7 +366,6 @@ public void render()
             {
                 uranusdetails[z] = csv[z];            
             }
-
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -411,7 +399,6 @@ public void render()
             {
                 neptunedetails[z] = csv[z];            
             }
-
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -435,7 +422,7 @@ public void render()
             h = 0;
         }
         
-        Info info = infos.get(rowNum); 
+        Info info = infos.get(rowNum);  // loads each row of the CSV rowNum selects which one
 
         csv[0] = info.getPlanetName();
         csv[1] = info.getPlanetSize();
@@ -446,12 +433,12 @@ public void render()
         csv[6] = info.getDistanceFromSun();
         csv[7] = info.getPlanetTemp();
         csv[8] = info.getGravity();
-        csv[9] = info.getLengthOfDay();
-      
+        csv[9] = info.getLengthOfDay();      
     }
 
     public void rectangles()
     {
+        //draws rectangles aroung the stationary images in order to make buttons
         ui.noFill();
         ui.rect(xrect -50, yrect-20, 100, 100);
         ui.rect(xrect -10, (yrect*2)+30, 20, 20);
@@ -478,7 +465,6 @@ public void render()
         ui.fill(0);
         ui.rect(xrect +70,yrect,1200,1600);
         ui.rect(xrect +150,yrect -90,1000,100);
-
 
         ui.noFill();
         ui.stroke(255);

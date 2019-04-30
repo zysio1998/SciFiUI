@@ -155,12 +155,6 @@ public class Info
         LengthOfDay = lengthOfDay;
     }
 
-    public String toString()
-    {
-        return PlanetName + "\t" + PlanetSize + "\t" +  PlanetMass + "\t" + PlanetPopulation + "\t" + AmountOfMoons + "\t" + TimeOfOrbitAroundSun + "\t" + DistanceFromSun + "\t" + PlanetTemp + "\t" + Gravity + "\t" + LengthOfDay;  
-    }
-
-
     public Info(TableRow row)
     {
         PlanetName = row.getString("PlanetName");
