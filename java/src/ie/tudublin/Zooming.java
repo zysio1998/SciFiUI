@@ -1,22 +1,11 @@
 package ie.tudublin;
 
-
-//import static processing.core.PConstants.SPHERE;
-
 import processing.core.PApplet;
 import processing.core.PImage;
-//import processing.core.PShape;
 
 public class Zooming extends PlanetObjects
 {
-
-    //private float radius;
-    private PImage sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune;
-    
-    //private PShape globe;
-    //private PShape globe2;
-    //private PImage[] textures = new PImage[8];
-
+    private PImage sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune;   
     private float xrect;
     private float yrect;
     private int a = 0;
@@ -27,14 +16,11 @@ public class Zooming extends PlanetObjects
     private int f = 0;
     private int g = 0;
     private int h = 0;
-    private int i = 0;
-    
-
+    private int i = 0;  
 
     public Zooming(PApplet ui, float x, float y, float width,float height) 
     {
         super(ui, x, y, width,height);
-
 
         sun = ui.loadImage("images/sun.png"); // 100*100
         mercury = ui.loadImage("images/mercury.png"); // 20*20
@@ -44,23 +30,10 @@ public class Zooming extends PlanetObjects
         jupiter = ui.loadImage("images/jupiter.png"); // 70*70
         saturn = ui.loadImage("images/saturn.png"); // 55*55
         uranus = ui.loadImage("images/uranus.png"); // 35*35
-        neptune = ui.loadImage("images/neptune.png"); // 35*35   
-        // textures[0] = ui.loadImage("images/mercury.jpg");
-        // textures[1] = ui.loadImage("images/venus.jpg");
-        // textures[2] = ui.loadImage("images/earth.jpg");
-        // textures[3] = ui.loadImage("images/mars.jpg");
-        // textures[4] = ui.loadImage("images/jupiter.jpg");
-        // textures[5] = ui.loadImage("images/saturn.jpg");
-        // textures[6] = ui.loadImage("images/uranus.jpg");
-        // textures[7] = ui.loadImage("images/neptune.jpg");  
+        neptune = ui.loadImage("images/neptune.png"); // 35*35       
 
         xrect = width/8;
-        yrect = height/9;
-
-    
-
-        
-        
+        yrect = height/9;    
     }
 
     public void render()
@@ -114,11 +87,7 @@ public class Zooming extends PlanetObjects
                 ui.delay(100); 
                 i++;
             } 
-
-
-
         }    
-
     }
 
     public void update()
@@ -159,7 +128,6 @@ public class Zooming extends PlanetObjects
         {
             ui.image(neptune,xrect +700,yrect -150);
         }
-
     }
 
     public void rectangles()
@@ -173,20 +141,13 @@ public class Zooming extends PlanetObjects
         ui.rect(xrect -35, (yrect*6)-90, 70, 70);
         ui.rect(xrect -27, (yrect*7)-75, 55, 55);
         ui.rect(xrect -17, (yrect*8)-70, 35, 35);
-        ui.rect(xrect -17, (yrect*9)-90, 35, 35);
-
-        //ui.stroke(255,250,250);
-
+        ui.rect(xrect -17, (yrect*9)-90, 35, 35);     
         ui.noStroke();
     }
 
-    public void arek()
+    public void writing()
     {
-        //ui.translate( 800,800,0);
-        // ui.noStroke();
-        // ui.noFill();        
-        // globe = ui.createShape(SPHERE, 200);
-        // globe.setTexture(img);
+      
 
         
 

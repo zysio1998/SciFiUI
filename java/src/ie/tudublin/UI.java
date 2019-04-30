@@ -69,8 +69,8 @@ public class UI extends PApplet
 		
 	
 	    
-		//orbits.render();	
-		//orbits.update();
+		orbits.render();	
+		orbits.update();
 		
 		planetDisplay.render();
 
