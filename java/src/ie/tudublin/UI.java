@@ -48,12 +48,7 @@ public class UI extends PApplet
     public void draw()
     {
 		background(0);
-		
-		
 
-		
-	
-	    
 		orbits.render();	
 		orbits.update();
 		
@@ -65,9 +60,6 @@ public class UI extends PApplet
 		zooming.render();
 		zooming.update();
 
-		
-		
-		
 
 		noStroke();
 		line(width/8,0,width/8,height);
@@ -76,12 +68,6 @@ public class UI extends PApplet
 		line(0,height/2,width,height/2);
 		
 
-
-        
-		
-        
-
-        
     }
 }
 
