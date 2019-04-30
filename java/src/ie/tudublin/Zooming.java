@@ -27,7 +27,9 @@ public class Zooming extends Info
     private ArrayList<Info> infos = new ArrayList<Info>();    
 
     private String csv[] = {"","","","","","","","","","",""};
-  
+    private String headers[] = {"Diameter of Planet: ","Mass of Planet: ","Population of Planet: ","Amount of Moons: ",
+    "Time of Orbit around the Sun: ","Distance from the Sun: ","Temperature of Planet: ",
+    "Gravitational force of Planet: ","Length of day on the Planet: "};  
     private String sundetails[] = {"","","","","","","","","",""};
     private String mercurydetails[] = {"","","","","","","","","",""};
     private String venusdetails[] = {"","","","","","","","","",""};
@@ -75,7 +77,6 @@ public class Zooming extends Info
     
 public void render()
     {
-
         if(ui.mousePressed)
         {
             if(ui.mouseX > xrect-50 && ui.mouseX < xrect +50 && ui.mouseY > yrect -20 && ui.mouseY < yrect +80)
@@ -128,7 +129,10 @@ public void render()
 
     public void update()
     {
-        int w = 0;
+        int rowNum = 0;
+        float x = ((width/4) +50);
+        float y = ((yrect*1.5f)+90);
+        int gap = 0;
 
         if(a % 2 != 0)
         {
@@ -136,7 +140,7 @@ public void render()
 
             ui.image(sun,xrect*5,yrect*1.5f);       
 
-            w = 0; 
+            rowNum = 0; 
 
             for(int z = 0; z <10; z++ )
             { 
@@ -149,15 +153,12 @@ public void render()
             ui.text(sundetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + sundetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + sundetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + sundetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + sundetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + sundetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + sundetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + sundetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + sundetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + sundetails[9],(width/4) +50,(yrect*1.5f)+410);
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + sundetails[v+1],x,y + gap);
+                gap = gap +40;
+            }
+            
             ui.textSize(15);
 
             b = 0;
@@ -173,13 +174,11 @@ public void render()
         {
             boxes();
             ui.image(mercury,xrect*5,yrect*1.5f);
-            w=1;
+            rowNum = 1;
             
             for(int z = 0; z <10; z++ )
-            {
-            
-                mercurydetails[z] = csv[z];           
-                
+            {            
+                mercurydetails[z] = csv[z];                 
             }
             
             ui.fill(255);
@@ -188,15 +187,11 @@ public void render()
             ui.text(mercurydetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + mercurydetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + mercurydetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + mercurydetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + mercurydetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + mercurydetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + mercurydetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + mercurydetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + mercurydetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + mercurydetails[9],(width/4) +50,(yrect*1.5f)+410);
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + mercurydetails[v+1],x,y + gap);
+                gap = gap +40;
+            }
             ui.textSize(15);
 
             a = 0;
@@ -212,7 +207,7 @@ public void render()
         {
             boxes();
             ui.image(venus,xrect*5,yrect*1.5f);
-            w = 2;
+            rowNum = 2;
             for(int z = 0; z <10; z++ )
             {
                 venusdetails[z] = csv[z];            
@@ -224,15 +219,11 @@ public void render()
             ui.text(venusdetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + venusdetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + venusdetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + venusdetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + venusdetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + venusdetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + venusdetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + venusdetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + venusdetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + venusdetails[9],(width/4) +50,(yrect*1.5f)+410);
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + venusdetails[v+1],x,y + gap);
+                gap = gap +40;
+            }
             ui.textSize(15);
 
             a = 0;
@@ -249,7 +240,7 @@ public void render()
             boxes();
             ui.image(earth,xrect*5,yrect*1.5f);
 
-            w = 3;
+            rowNum = 3;
             for(int z = 0; z <10; z++ )
             {
                 earthdetails[z] = csv[z];            
@@ -261,15 +252,11 @@ public void render()
             ui.text(earthdetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + earthdetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + earthdetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + earthdetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + earthdetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + earthdetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + earthdetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + earthdetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + earthdetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + earthdetails[9],(width/4) +50,(yrect*1.5f)+410);
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + earthdetails[v+1],x,y + gap);
+                gap = gap +40;
+            }
             ui.textSize(15);
 
             a = 0;
@@ -286,7 +273,7 @@ public void render()
             boxes();
             ui.image(mars,xrect*5,yrect*1.5f);
 
-            w = 4;
+            rowNum = 4;
             for(int z = 0; z <10; z++ )
             {
                 marsdetails[z] = csv[z];            
@@ -298,15 +285,11 @@ public void render()
             ui.text(marsdetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + marsdetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + marsdetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + marsdetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + marsdetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + marsdetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + marsdetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + marsdetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + marsdetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + marsdetails[9],(width/4) +50,(yrect*1.5f)+410);
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + marsdetails[v+1],x,y + gap);
+                gap = gap +40;
+            }
             ui.textSize(15);
 
             a = 0;
@@ -323,7 +306,7 @@ public void render()
             boxes();
             ui.image(jupiter,xrect*5,yrect*1.5f);
 
-            w = 5;
+            rowNum = 5;
             for(int z = 0; z <10; z++ )
             {
                 jupiterdetails[z] = csv[z];            
@@ -335,15 +318,11 @@ public void render()
             ui.text(jupiterdetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + jupiterdetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + jupiterdetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + jupiterdetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + jupiterdetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + jupiterdetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + jupiterdetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + jupiterdetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + jupiterdetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + jupiterdetails[9],(width/4) +50,(yrect*1.5f)+410);
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + jupiterdetails[v+1],x,y + gap);
+                gap = gap +40;
+            }
             ui.textSize(15);
 
             a = 0;
@@ -360,7 +339,7 @@ public void render()
             boxes();
             ui.image(saturn,xrect*5,yrect*1.5f);
 
-            w = 6;
+            rowNum = 6;
             for(int z = 0; z <10; z++ )
             {
                 saturndetails[z] = csv[z];            
@@ -372,15 +351,11 @@ public void render()
             ui.text(saturndetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + saturndetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + saturndetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + saturndetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + saturndetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + saturndetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + saturndetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + saturndetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + saturndetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + saturndetails[9],(width/4) +50,(yrect*1.5f)+410);            
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + saturndetails[v+1],x,y + gap);
+                gap = gap +40;
+            }          
             ui.textSize(15);
             
             a = 0;
@@ -397,7 +372,7 @@ public void render()
             boxes();
             ui.image(uranus,xrect*5,yrect*1.5f);
 
-            w = 7;
+            rowNum = 7;
             for(int z = 0; z <10; z++ )
             {
                 uranusdetails[z] = csv[z];            
@@ -409,15 +384,11 @@ public void render()
             ui.text(uranusdetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + uranusdetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + uranusdetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + uranusdetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + uranusdetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + uranusdetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + uranusdetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + uranusdetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + uranusdetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + uranusdetails[9],(width/4) +50,(yrect*1.5f)+410);            
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + uranusdetails[v+1],x,y + gap);
+                gap = gap +40;
+            }           
             ui.textSize(15);
 
             a = 0;
@@ -435,7 +406,7 @@ public void render()
             boxes();
             ui.image(neptune,xrect*5,yrect*1.5f);
 
-            w = 8;
+            rowNum = 8;
             for(int z = 0; z <10; z++ )
             {
                 neptunedetails[z] = csv[z];            
@@ -447,15 +418,11 @@ public void render()
             ui.text(neptunedetails[0],(width/4) +250,(yrect*1.5f)+50);
             ui.textAlign(PApplet.LEFT, PApplet.CENTER);
             ui.textSize(15);
-            ui.text("Diameter of Planet: " + neptunedetails[1],(width/4) +50,(yrect*1.5f)+90);
-            ui.text("Mass of Planet: " + neptunedetails[2],(width/4) +50,(yrect*1.5f)+130);
-            ui.text("Population of Planet: " + neptunedetails[3],(width/4) +50,(yrect*1.5f)+170);
-            ui.text("Amount of Moons: " + neptunedetails[4],(width/4) +50,(yrect*1.5f)+210);
-            ui.text("Time of Orbit around the Sun: " + neptunedetails[5],(width/4) +50,(yrect*1.5f)+250);
-            ui.text("Distance from the Sun: " + neptunedetails[6],(width/4) +50,(yrect*1.5f)+290);
-            ui.text("Temperature of Planet: " + neptunedetails[7],(width/4) +50,(yrect*1.5f)+330);
-            ui.text("Gravitational force of Planet: " + neptunedetails[8],(width/4) +50,(yrect*1.5f)+370);
-            ui.text("Length of day on the Planet: " + neptunedetails[9],(width/4) +50,(yrect*1.5f)+410);            
+            for(int v = 0; v < 9; v++)
+            {
+                ui.text(headers[v] + neptunedetails[v+1],x,y + gap);
+                gap = gap +40;
+            }    
             ui.textSize(15);
 
             a = 0;
@@ -467,9 +434,8 @@ public void render()
             g = 0;
             h = 0;
         }
-
         
-        Info info = infos.get(w); 
+        Info info = infos.get(rowNum); 
 
         csv[0] = info.getPlanetName();
         csv[1] = info.getPlanetSize();
@@ -481,6 +447,7 @@ public void render()
         csv[7] = info.getPlanetTemp();
         csv[8] = info.getGravity();
         csv[9] = info.getLengthOfDay();
+      
     }
 
     public void rectangles()
