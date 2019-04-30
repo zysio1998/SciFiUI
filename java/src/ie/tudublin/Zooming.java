@@ -25,6 +25,10 @@ public class Zooming extends Info
     private int h = 0;
     private int i = 0;  
     private ArrayList<Info> infos = new ArrayList<Info>();    
+
+  
+    private String sundetails[] = {"","","","","","","","","",""};
+    private String sunmass;
     
      
     public Zooming(PApplet ui, float width,float height) 
@@ -47,7 +51,7 @@ public class Zooming extends Info
         yrect = height/9;  
 
         loadData();
-        printStars();
+        //printStars();
     }
 
     public void loadData()
@@ -61,11 +65,17 @@ public class Zooming extends Info
         }
     }
 
-    public void printStars() {
-        for (Info info : infos) {
-            System.out.println(info);
-        }
-    }
+    // public void printStars() 
+    // {
+    //     Info Sunn = infos.get(0);      
+    //     //System.out.println(info);
+    //     sunname = Sunn.getPlanetName();
+    //     sunmass = Sunn.getPlanetMass();
+
+
+        
+        
+    // }
 
     public void render()
     {
@@ -124,16 +134,40 @@ public class Zooming extends Info
     {
         if(a % 2 != 0)
         {
-            loadData();
+           
             ui.fill(0);
             ui.rect(xrect +70,yrect,1000,1600);
             ui.image(sun,xrect*5,yrect*1.5f);
 
+            Info Sunn = infos.get(1);  
+            
+            
+            
+            sundetails[0] = Sunn.getPlanetName();
+            sundetails[1] = Sunn.getPlanetSize();
+            sundetails[2] = Sunn.getPlanetMass();
+            sundetails[3] = Sunn.getPlanetPopulation();
+            sundetails[4] = Sunn.getAmountOfMoons();
+            sundetails[5] = Sunn.getTimeOfOrbitAroundSun();
+            sundetails[6] = Sunn.getDistanceFromSun();
+            sundetails[7] = Sunn.getPlanetTemp();
+            sundetails[8] = Sunn.getGravity();
+            sundetails[9] = Sunn.getLengthOfDay();
 
-            // ui.fill(255);
-            // ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-            // ui.text(PlanetMass,xrect,yrect - 45);
-            // ui.textSize(15);
+            ui.fill(255);
+            ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+            ui.text(sundetails[0],xrect+50,yrect - 45);
+            ui.text(sundetails[1],xrect+50,yrect - 50);
+            ui.text(sundetails[2],xrect+50,yrect - 60);
+            ui.text(sundetails[3],xrect+100,yrect - 50);
+            ui.text(sundetails[4],xrect+100,yrect - 20);
+            ui.text(sundetails[5],xrect+100,yrect - 30);
+            ui.text(sundetails[6],xrect+100,yrect - 40);
+            ui.text(sundetails[7],xrect+100,yrect - 10);
+            ui.text(sundetails[8],xrect+150,yrect - 50);
+            ui.text(sundetails[9],xrect+150,yrect - 60);
+
+            ui.textSize(15);
 
 
             b = 0;
