@@ -26,6 +26,7 @@ public class Zooming extends Info
     private int i = 0;  
     private ArrayList<Info> infos = new ArrayList<Info>();    
 
+    private String csv[] = {"","","","","","","","","","",""};
   
     private String sundetails[] = {"","","","","","","","","",""};
     private String mercurydetails[] = {"","","","","","","","","",""};
@@ -57,8 +58,7 @@ public class Zooming extends Info
         xrect = width/8;
         yrect = height/9;  
 
-        loadData();
-       
+        loadData();       
     }
 
     public void loadData()
@@ -73,9 +73,7 @@ public class Zooming extends Info
     }
 
     
-   
-
-    public void render()
+public void render()
     {
 
         if(ui.mousePressed)
@@ -130,24 +128,21 @@ public class Zooming extends Info
 
     public void update()
     {
+        int w = 0;
+
         if(a % 2 != 0)
         {
             boxes();  
-            ui.image(sun,xrect*5,yrect*1.5f);       
-            
-            //ui.rect(width/4,yrect*1.5f,500,500);
 
-            Info Sunn = infos.get(0);        
-            sundetails[0] = Sunn.getPlanetName();
-            sundetails[1] = Sunn.getPlanetSize();
-            sundetails[2] = Sunn.getPlanetMass();
-            sundetails[3] = Sunn.getPlanetPopulation();
-            sundetails[4] = Sunn.getAmountOfMoons();
-            sundetails[5] = Sunn.getTimeOfOrbitAroundSun();
-            sundetails[6] = Sunn.getDistanceFromSun();
-            sundetails[7] = Sunn.getPlanetTemp();
-            sundetails[8] = Sunn.getGravity();
-            sundetails[9] = Sunn.getLengthOfDay();
+            ui.image(sun,xrect*5,yrect*1.5f);       
+
+            w = 0; 
+
+            for(int z = 0; z <10; z++ )
+            { 
+                sundetails[z] = csv[z];           
+            }
+            
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -178,18 +173,15 @@ public class Zooming extends Info
         {
             boxes();
             ui.image(mercury,xrect*5,yrect*1.5f);
-
-            Info Mercury = infos.get(1);
-            mercurydetails[0] = Mercury.getPlanetName();
-            mercurydetails[1] = Mercury.getPlanetSize();
-            mercurydetails[2] = Mercury.getPlanetMass();
-            mercurydetails[3] = Mercury.getPlanetPopulation();
-            mercurydetails[4] = Mercury.getAmountOfMoons();
-            mercurydetails[5] = Mercury.getTimeOfOrbitAroundSun();
-            mercurydetails[6] = Mercury.getDistanceFromSun();
-            mercurydetails[7] = Mercury.getPlanetTemp();
-            mercurydetails[8] = Mercury.getGravity();
-            mercurydetails[9] = Mercury.getLengthOfDay();
+            w=1;
+            
+            for(int z = 0; z <10; z++ )
+            {
+            
+                mercurydetails[z] = csv[z];           
+                
+            }
+            
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -220,18 +212,12 @@ public class Zooming extends Info
         {
             boxes();
             ui.image(venus,xrect*5,yrect*1.5f);
+            w = 2;
+            for(int z = 0; z <10; z++ )
+            {
+                venusdetails[z] = csv[z];            
+            }
 
-            Info Venus = infos.get(2);
-            venusdetails[0] = Venus.getPlanetName();
-            venusdetails[1] = Venus.getPlanetSize();
-            venusdetails[2] = Venus.getPlanetMass();
-            venusdetails[3] = Venus.getPlanetPopulation();
-            venusdetails[4] = Venus.getAmountOfMoons();
-            venusdetails[5] = Venus.getTimeOfOrbitAroundSun();
-            venusdetails[6] = Venus.getDistanceFromSun();
-            venusdetails[7] = Venus.getPlanetTemp();
-            venusdetails[8] = Venus.getGravity();
-            venusdetails[9] = Venus.getLengthOfDay();
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -263,17 +249,12 @@ public class Zooming extends Info
             boxes();
             ui.image(earth,xrect*5,yrect*1.5f);
 
-            Info Earth = infos.get(3);
-            earthdetails[0] = Earth.getPlanetName();
-            earthdetails[1] = Earth.getPlanetSize();
-            earthdetails[2] = Earth.getPlanetMass();
-            earthdetails[3] = Earth.getPlanetPopulation();
-            earthdetails[4] = Earth.getAmountOfMoons();
-            earthdetails[5] = Earth.getTimeOfOrbitAroundSun();
-            earthdetails[6] = Earth.getDistanceFromSun();
-            earthdetails[7] = Earth.getPlanetTemp();
-            earthdetails[8] = Earth.getGravity();
-            earthdetails[9] = Earth.getLengthOfDay();
+            w = 3;
+            for(int z = 0; z <10; z++ )
+            {
+                earthdetails[z] = csv[z];            
+            }
+
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -305,17 +286,12 @@ public class Zooming extends Info
             boxes();
             ui.image(mars,xrect*5,yrect*1.5f);
 
-            Info Mars = infos.get(4);
-            marsdetails[0] = Mars.getPlanetName();
-            marsdetails[1] = Mars.getPlanetSize();
-            marsdetails[2] = Mars.getPlanetMass();
-            marsdetails[3] = Mars.getPlanetPopulation();
-            marsdetails[4] = Mars.getAmountOfMoons();
-            marsdetails[5] = Mars.getTimeOfOrbitAroundSun();
-            marsdetails[6] = Mars.getDistanceFromSun();
-            marsdetails[7] = Mars.getPlanetTemp();
-            marsdetails[8] = Mars.getGravity();
-            marsdetails[9] = Mars.getLengthOfDay();
+            w = 4;
+            for(int z = 0; z <10; z++ )
+            {
+                marsdetails[z] = csv[z];            
+            }
+
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -347,17 +323,12 @@ public class Zooming extends Info
             boxes();
             ui.image(jupiter,xrect*5,yrect*1.5f);
 
-            Info Jupiter = infos.get(5);
-            jupiterdetails[0] = Jupiter.getPlanetName();
-            jupiterdetails[1] = Jupiter.getPlanetSize();
-            jupiterdetails[2] = Jupiter.getPlanetMass();
-            jupiterdetails[3] = Jupiter.getPlanetPopulation();
-            jupiterdetails[4] = Jupiter.getAmountOfMoons();
-            jupiterdetails[5] = Jupiter.getTimeOfOrbitAroundSun();
-            jupiterdetails[6] = Jupiter.getDistanceFromSun();
-            jupiterdetails[7] = Jupiter.getPlanetTemp();
-            jupiterdetails[8] = Jupiter.getGravity();
-            jupiterdetails[9] = Jupiter.getLengthOfDay();
+            w = 5;
+            for(int z = 0; z <10; z++ )
+            {
+                jupiterdetails[z] = csv[z];            
+            }
+
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -389,17 +360,12 @@ public class Zooming extends Info
             boxes();
             ui.image(saturn,xrect*5,yrect*1.5f);
 
-            Info Saturn = infos.get(6);
-            saturndetails[0] = Saturn.getPlanetName();
-            saturndetails[1] = Saturn.getPlanetSize();
-            saturndetails[2] = Saturn.getPlanetMass();
-            saturndetails[3] = Saturn.getPlanetPopulation();
-            saturndetails[4] = Saturn.getAmountOfMoons();
-            saturndetails[5] = Saturn.getTimeOfOrbitAroundSun();
-            saturndetails[6] = Saturn.getDistanceFromSun();
-            saturndetails[7] = Saturn.getPlanetTemp();
-            saturndetails[8] = Saturn.getGravity();
-            saturndetails[9] = Saturn.getLengthOfDay();
+            w = 6;
+            for(int z = 0; z <10; z++ )
+            {
+                saturndetails[z] = csv[z];            
+            }
+
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -431,17 +397,12 @@ public class Zooming extends Info
             boxes();
             ui.image(uranus,xrect*5,yrect*1.5f);
 
-            Info Uranus = infos.get(7);
-            uranusdetails[0] = Uranus.getPlanetName();
-            uranusdetails[1] = Uranus.getPlanetSize();
-            uranusdetails[2] = Uranus.getPlanetMass();
-            uranusdetails[3] = Uranus.getPlanetPopulation();
-            uranusdetails[4] = Uranus.getAmountOfMoons();
-            uranusdetails[5] = Uranus.getTimeOfOrbitAroundSun();
-            uranusdetails[6] = Uranus.getDistanceFromSun();
-            uranusdetails[7] = Uranus.getPlanetTemp();
-            uranusdetails[8] = Uranus.getGravity();
-            uranusdetails[9] = Uranus.getLengthOfDay();
+            w = 7;
+            for(int z = 0; z <10; z++ )
+            {
+                uranusdetails[z] = csv[z];            
+            }
+
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -474,17 +435,12 @@ public class Zooming extends Info
             boxes();
             ui.image(neptune,xrect*5,yrect*1.5f);
 
-            Info Neptune = infos.get(8);
-            neptunedetails[0] = Neptune.getPlanetName();
-            neptunedetails[1] = Neptune.getPlanetSize();
-            neptunedetails[2] = Neptune.getPlanetMass();
-            neptunedetails[3] = Neptune.getPlanetPopulation();
-            neptunedetails[4] = Neptune.getAmountOfMoons();
-            neptunedetails[5] = Neptune.getTimeOfOrbitAroundSun();
-            neptunedetails[6] = Neptune.getDistanceFromSun();
-            neptunedetails[7] = Neptune.getPlanetTemp();
-            neptunedetails[8] = Neptune.getGravity();
-            neptunedetails[9] = Neptune.getLengthOfDay();
+            w = 8;
+            for(int z = 0; z <10; z++ )
+            {
+                neptunedetails[z] = csv[z];            
+            }
+
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
             ui.textSize(25);
@@ -511,6 +467,20 @@ public class Zooming extends Info
             g = 0;
             h = 0;
         }
+
+        
+        Info info = infos.get(w); 
+
+        csv[0] = info.getPlanetName();
+        csv[1] = info.getPlanetSize();
+        csv[2] = info.getPlanetMass();
+        csv[3] = info.getPlanetPopulation();
+        csv[4] = info.getAmountOfMoons();
+        csv[5] = info.getTimeOfOrbitAroundSun();
+        csv[6] = info.getDistanceFromSun();
+        csv[7] = info.getPlanetTemp();
+        csv[8] = info.getGravity();
+        csv[9] = info.getLengthOfDay();
     }
 
     public void rectangles()
@@ -547,16 +517,5 @@ public class Zooming extends Info
         ui.stroke(255);
         ui.rect(width/4,yrect*1.5f,500,500);
     }
-
-    
-
-    
-
-          
-
-
-    
-    
-
 
 }
