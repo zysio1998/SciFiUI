@@ -132,16 +132,10 @@ public class Zooming extends Info
     {
         if(a % 2 != 0)
         {
-           
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
-            ui.image(sun,xrect*5,yrect*1.5f);
-
-            ui.noFill();
-            ui.stroke(255);
-            ui.rect(width/4,yrect*1.5f,500,500);
-
+            boxes();  
+            ui.image(sun,xrect*5,yrect*1.5f);       
             
+            //ui.rect(width/4,yrect*1.5f,500,500);
 
             Info Sunn = infos.get(0);        
             sundetails[0] = Sunn.getPlanetName();
@@ -156,16 +150,19 @@ public class Zooming extends Info
             sundetails[9] = Sunn.getLengthOfDay();
             ui.fill(255);
             ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-            ui.text(sundetails[0],xrect+50,yrect - 45);
-            ui.text(sundetails[1],xrect+50,yrect - 50);
-            ui.text(sundetails[2],xrect+50,yrect - 60);
-            ui.text(sundetails[3],xrect+100,yrect - 50);
-            ui.text(sundetails[4],xrect+100,yrect - 20);
-            ui.text(sundetails[5],xrect+100,yrect - 30);
-            ui.text(sundetails[6],xrect+100,yrect - 40);
-            ui.text(sundetails[7],xrect+100,yrect - 10);
-            ui.text(sundetails[8],xrect+150,yrect - 50);
-            ui.text(sundetails[9],xrect+150,yrect - 60);
+            ui.textSize(25);
+            ui.text("Name of Planet: " + sundetails[0],(width/4) +250,(yrect*1.5f)+50);
+            ui.textAlign(PApplet.LEFT, PApplet.CENTER);
+            ui.textSize(15);
+            ui.text("Diameter of Planet: " + sundetails[1],(width/4) +50,(yrect*1.5f)+90);
+            ui.text("Mass of Planet: " + sundetails[2],(width/4) +50,(yrect*1.5f)+130);
+            ui.text("Population of Planet: " + sundetails[3],(width/4) +50,(yrect*1.5f)+150);
+            ui.text("Amount of Moons: " + sundetails[4],(width/4) +50,(yrect*1.5f)+170);
+            ui.text("Time of Orbit around the Sun: " + sundetails[5],(width/4) +50,(yrect*1.5f)+190);
+            ui.text("Distance from the Sun: " + sundetails[6],(width/4) +50,(yrect*1.5f)+210);
+            ui.text("Temperature of Planet: " + sundetails[7],(width/4) +50,(yrect*1.5f)+230);
+            ui.text("Gravitational force of Planet: " + sundetails[8],(width/4) +50,(yrect*1.5f)+250);
+            ui.text("Length of day on the Planet: " + sundetails[9],(width/4) +50,(yrect*1.5f)+270);
             ui.textSize(15);
 
             b = 0;
@@ -179,8 +176,7 @@ public class Zooming extends Info
         }
         else if(b % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            boxes();
             ui.image(mercury,xrect*5,yrect*1.5f);
 
             Info Mercury = infos.get(1);
@@ -219,8 +215,7 @@ public class Zooming extends Info
         }
         else if(c % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            boxes();
             ui.image(venus,xrect*5,yrect*1.5f);
 
             Info Venus = infos.get(2);
@@ -259,8 +254,7 @@ public class Zooming extends Info
         }
         else if(d % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            boxes();
             ui.image(earth,xrect*5,yrect*1.5f);
 
             Info Earth = infos.get(3);
@@ -299,8 +293,7 @@ public class Zooming extends Info
         }
         else if(e % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            boxes();
             ui.image(mars,xrect*5,yrect*1.5f);
 
             Info Mars = infos.get(4);
@@ -339,8 +332,7 @@ public class Zooming extends Info
         }
         else if(f % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            boxes();
             ui.image(jupiter,xrect*5,yrect*1.5f);
 
             Info Jupiter = infos.get(5);
@@ -379,8 +371,7 @@ public class Zooming extends Info
         }
         else if(g % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            boxes();
             ui.image(saturn,xrect*5,yrect*1.5f);
 
             Info Saturn = infos.get(6);
@@ -419,8 +410,7 @@ public class Zooming extends Info
         } 
         else if(h % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            boxes();
             ui.image(uranus,xrect*5,yrect*1.5f);
 
             Info Uranus = infos.get(7);
@@ -459,8 +449,8 @@ public class Zooming extends Info
         }
         else if(i % 2 != 0)
         {
-            ui.fill(0);
-            ui.rect(xrect +70,yrect,1200,1600);
+            
+            boxes();
             ui.image(neptune,xrect*5,yrect*1.5f);
 
             Info Neptune = infos.get(8);
@@ -520,6 +510,16 @@ public class Zooming extends Info
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text("Click a planet for more Information",xrect,yrect - 45);
         ui.textSize(15);
+    }
+
+    public void boxes()
+    {
+        ui.fill(0);
+        ui.rect(xrect +70,yrect,1200,1600);
+
+        ui.noFill();
+        ui.stroke(255);
+        ui.rect(width/4,yrect*1.5f,500,500);
     }
 
     
