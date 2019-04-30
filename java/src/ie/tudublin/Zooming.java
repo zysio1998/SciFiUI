@@ -33,7 +33,7 @@ public class Zooming extends PlanetObjects
         neptune = ui.loadImage("images/neptune2.png"); // 35*35       
 
         xrect = width/8;
-        yrect = height/9;    
+        yrect = height/9;  
     }
 
     public void render()
@@ -84,7 +84,7 @@ public class Zooming extends PlanetObjects
             } 
             else if(ui.mouseX > xrect-17 && ui.mouseX < xrect +18 && ui.mouseY > (yrect*9) -90 && ui.mouseY < (yrect*9) -55) 
             {
-                ui.delay(100); 
+                ui.delay(100);  
                 i++;
             } 
         }    
@@ -94,7 +94,7 @@ public class Zooming extends PlanetObjects
     {
         if(a % 2 != 0)
         {
-            ui.image(sun,xrect*5,yrect*2.5f);
+            ui.image(sun,xrect*5,yrect*1.5f);
             b = 0;
             c = 0;
             d = 0;
