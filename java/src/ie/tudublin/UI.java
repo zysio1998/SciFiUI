@@ -120,11 +120,18 @@ public class UI extends PApplet
 		// line(1000,0,1000,1000);
 		//ellipse(500,400,350,350);
 		//fill(255,250,250);
+
+		noStroke();
 		line(width/8,0,width/8,height);
 		
 		line(width/2,0,width/2,height);
 		line(0,height/2,width,height/2);
 		//stroke(255,250,250);
+
+		// noFill();
+		// stroke(255);
+    	// rect(width/8 +70,height/2,1000,1400);
+        
 		
         
 

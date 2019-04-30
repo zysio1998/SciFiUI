@@ -134,8 +134,14 @@ public class Zooming extends Info
         {
            
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(sun,xrect*5,yrect*1.5f);
+
+            ui.noFill();
+            ui.stroke(255);
+            ui.rect(width/4,yrect*1.5f,500,500);
+
+            
 
             Info Sunn = infos.get(0);        
             sundetails[0] = Sunn.getPlanetName();
@@ -174,7 +180,7 @@ public class Zooming extends Info
         else if(b % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(mercury,xrect*5,yrect*1.5f);
 
             Info Mercury = infos.get(1);
@@ -214,7 +220,7 @@ public class Zooming extends Info
         else if(c % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(venus,xrect*5,yrect*1.5f);
 
             Info Venus = infos.get(2);
@@ -254,7 +260,7 @@ public class Zooming extends Info
         else if(d % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(earth,xrect*5,yrect*1.5f);
 
             Info Earth = infos.get(3);
@@ -294,7 +300,7 @@ public class Zooming extends Info
         else if(e % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(mars,xrect*5,yrect*1.5f);
 
             Info Mars = infos.get(4);
@@ -334,7 +340,7 @@ public class Zooming extends Info
         else if(f % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(jupiter,xrect*5,yrect*1.5f);
 
             Info Jupiter = infos.get(5);
@@ -374,7 +380,7 @@ public class Zooming extends Info
         else if(g % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(saturn,xrect*5,yrect*1.5f);
 
             Info Saturn = infos.get(6);
@@ -414,7 +420,7 @@ public class Zooming extends Info
         else if(h % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(uranus,xrect*5,yrect*1.5f);
 
             Info Uranus = infos.get(7);
@@ -454,7 +460,7 @@ public class Zooming extends Info
         else if(i % 2 != 0)
         {
             ui.fill(0);
-            ui.rect(xrect +70,yrect,1000,1600);
+            ui.rect(xrect +70,yrect,1200,1600);
             ui.image(neptune,xrect*5,yrect*1.5f);
 
             Info Neptune = infos.get(8);
