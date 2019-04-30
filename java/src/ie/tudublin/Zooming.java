@@ -43,7 +43,6 @@ public class Zooming extends PlanetObjects
         {
             if(ui.mouseX > xrect-50 && ui.mouseX < xrect +50 && ui.mouseY > yrect -20 && ui.mouseY < yrect +80)
             {
-                System.out.println("hello");
                 ui.delay(100); 
                 a++;
             }         
@@ -94,6 +93,8 @@ public class Zooming extends PlanetObjects
     {
         if(a % 2 != 0)
         {
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
             ui.image(sun,xrect*5,yrect*1.5f);
             b = 0;
             c = 0;
@@ -106,7 +107,9 @@ public class Zooming extends PlanetObjects
         }
         else if(b % 2 != 0)
         {
-            ui.image(mercury,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(mercury,xrect*5,yrect*1.5f);
             a = 0;
             c = 0;
             d = 0;
@@ -118,7 +121,9 @@ public class Zooming extends PlanetObjects
         }
         else if(c % 2 != 0)
         {
-            ui.image(venus,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(venus,xrect*5,yrect*1.5f);
             a = 0;
             b = 0;
             d = 0;
@@ -130,7 +135,9 @@ public class Zooming extends PlanetObjects
         }
         else if(d % 2 != 0)
         {
-            ui.image(earth,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(earth,xrect*5,yrect*1.5f);
             a = 0;
             b = 0;
             c = 0;
@@ -142,7 +149,9 @@ public class Zooming extends PlanetObjects
         }
         else if(e % 2 != 0)
         {
-            ui.image(mars,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(mars,xrect*5,yrect*1.5f);
             a = 0;
             b = 0;
             c = 0;
@@ -154,7 +163,9 @@ public class Zooming extends PlanetObjects
         }
         else if(f % 2 != 0)
         {
-            ui.image(jupiter,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(jupiter,xrect*5,yrect*1.5f);
             a = 0;
             b = 0;
             c = 0;
@@ -166,7 +177,9 @@ public class Zooming extends PlanetObjects
         }
         else if(g % 2 != 0)
         {
-            ui.image(saturn,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(saturn,xrect*5,yrect*1.5f);
             a = 0;
             b = 0;
             c = 0;
@@ -178,7 +191,9 @@ public class Zooming extends PlanetObjects
         } 
         else if(h % 2 != 0)
         {
-            ui.image(uranus,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(uranus,xrect*5,yrect*1.5f);
             a = 0;
             b = 0;
             c = 0;
@@ -190,7 +205,9 @@ public class Zooming extends PlanetObjects
         }
         else if(i % 2 != 0)
         {
-            ui.image(neptune,xrect*5,yrect*2.5f);
+            ui.fill(0);
+            ui.rect(xrect +70,yrect,1000,1600);
+            ui.image(neptune,xrect*5,yrect*1.5f);
             a = 0;
             b = 0;
             c = 0;
@@ -219,6 +236,7 @@ public class Zooming extends PlanetObjects
 
     public void writing()
     {
+        ui.fill(255);
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text("Click a planet for more Information",xrect,yrect - 45);
         ui.textSize(15);
