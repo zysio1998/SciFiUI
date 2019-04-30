@@ -54,7 +54,7 @@ public class UI extends PApplet
 		//b = new Button(this, 50, 50, 100, 50, "I am a button");
 		orbits = new Orbits(this,0,0, width,height);
 		planetDisplay = new PlanetDisplay(this,0,0,width,height);
-		zooming = new Zooming(this,0,0,width,height);
+		zooming = new Zooming(this,width,height);
 		
 
 		

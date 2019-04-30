@@ -1,10 +1,17 @@
 package ie.tudublin;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 import processing.core.PImage;
+import processing.data.TableRow;
+import processing.data.Table;
 
-public class Zooming extends PlanetObjects
+public class Zooming extends Info
 {
+    protected float width;
+    protected float height;
+    protected PApplet ui;
     private PImage sun, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune;   
     private float xrect;
     private float yrect;
@@ -17,10 +24,14 @@ public class Zooming extends PlanetObjects
     private int g = 0;
     private int h = 0;
     private int i = 0;  
-
-    public Zooming(PApplet ui, float x, float y, float width,float height) 
+    private ArrayList<Info> infos = new ArrayList<Info>();    
+    
+     
+    public Zooming(PApplet ui, float width,float height) 
     {
-        super(ui, x, y, width,height);
+        this.ui = ui;
+        this.width = width; 
+        this.height = height;
 
         sun = ui.loadImage("images/sun2.png"); // 100*100
         mercury = ui.loadImage("images/mercury2.png"); // 20*20
@@ -34,6 +45,26 @@ public class Zooming extends PlanetObjects
 
         xrect = width/8;
         yrect = height/9;  
+
+        loadData();
+        printStars();
+    }
+
+    public void loadData()
+    {
+        Table table = ui.loadTable("Planets.csv", "header");
+        
+        for (TableRow row : table.rows()) 
+        {
+            Info info = new Info(row);
+            infos.add(info);      
+        }
+    }
+
+    public void printStars() {
+        for (Info info : infos) {
+            System.out.println(info);
+        }
     }
 
     public void render()
@@ -93,9 +124,18 @@ public class Zooming extends PlanetObjects
     {
         if(a % 2 != 0)
         {
+            loadData();
             ui.fill(0);
             ui.rect(xrect +70,yrect,1000,1600);
             ui.image(sun,xrect*5,yrect*1.5f);
+
+
+            // ui.fill(255);
+            // ui.textAlign(PApplet.CENTER, PApplet.CENTER);
+            // ui.text(PlanetMass,xrect,yrect - 45);
+            // ui.textSize(15);
+
+
             b = 0;
             c = 0;
             d = 0;
@@ -240,18 +280,16 @@ public class Zooming extends PlanetObjects
         ui.textAlign(PApplet.CENTER, PApplet.CENTER);
         ui.text("Click a planet for more Information",xrect,yrect - 45);
         ui.textSize(15);
-        
-      
-
-        
-
     }
 
+    
+
+    
+
+          
 
 
-
-
-
+    
     
 
 
