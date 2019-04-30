@@ -1,7 +1,7 @@
 package ie.tudublin;
 
 import processing.core.PApplet;
-import processing.core.PImage;
+
 
 
 
@@ -16,8 +16,7 @@ public class UI extends PApplet
 
 	
 	
-	//Orbits jup;
-	//PImage jupiterTexture;
+	
 
     //boolean[] keys = new boolean[1024];
 
@@ -42,7 +41,7 @@ public class UI extends PApplet
 		
         //size(fullScreen(), P3D);
         // Use fullscreen instead of size to make your interface fullscreen
-		fullScreen(P3D);
+		fullScreen();
 		
 		
 		
@@ -65,8 +64,7 @@ public class UI extends PApplet
     {
 		background(0);
 		
-		ambientLight(255,255,255);
-  		pointLight(255, 255, 255, 0, 0, 0);
+		
 
 		
 	
@@ -77,6 +75,9 @@ public class UI extends PApplet
 		planetDisplay.render();
 
 		zooming.rectangles();
+		
+		zooming.render();
+		zooming.update();
 
 		
 		// line(0,50,1000,50);
