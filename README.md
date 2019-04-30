@@ -1,16 +1,20 @@
 # SciFi UI Project
 
-Name:
+Name: Arkadiusz Rybicki
 
-Student Number: 
+Student Number: C17337523
 
 Fork this repository and use it a starter project for your assignment
 
 # Description of the assignment
+Its a solar system where the 8 planets are roating around the sun which is stationary. The 9 planets are shown on the left hand side in a column and when you click one, a big image appers with an interesting description of the planet clicked.
 
 # Instructions
 
+Click a one planet at a time. before you want to see the next one you have to UNCLICK the one you clicked otherwise it will not work
+
 # How it works
+
 
 # What I am most proud of in the assignment
 
